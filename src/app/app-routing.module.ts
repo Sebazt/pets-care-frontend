@@ -3,10 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { ServicesProductsComponent } from './services-products/services-products.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdminComponent } from './admin/admin.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
-  { path: 'servicios', component: ServicesProductsComponent },
   { path: '', component: HomeComponent },
+  { path: 'servicies', component: ServicesProductsComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'signin', component: SigninComponent },
+  { path: 'aboutus', component: AboutusComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'settings', component: SettingsComponent },
   { path: '**', pathMatch: 'full', redirectTo: '/' },
   { path: 'error', component: NotFoundComponent },
 ];

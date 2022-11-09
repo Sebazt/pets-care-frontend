@@ -1,18 +1,18 @@
 export const navbarData = [
   {
-    routeLink: 'servicios',
+    routeLink: 'servicies',
     icon: 'fa fa-home',
-    label: 'Servicios',
+    label: 'Servicies',
   },
 
   {
-    routeLink: 'sign up',
+    routeLink: 'signup',
     icon: 'fa fa-box-open',
     label: 'Sign up',
   },
 
   {
-    routeLink: 'sign in',
+    routeLink: 'signin',
     icon: 'fa fa-chart-bar',
     label: 'Sign in',
   },
@@ -27,5 +27,11 @@ export const navbarData = [
     routeLink: 'admin',
     icon: 'fa-solid fa-shop-lock',
     label: 'Admin',
+  },
+
+  {
+    routeLink: 'settings',
+    icon: 'fa-solid fa-shop-lock',
+    label: 'Settings',
   },
 ];
