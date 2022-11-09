@@ -66,7 +66,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(100% - 3.65rem);
   cursor: pointer;
 
   .sidenav-nav-item {
@@ -100,7 +99,7 @@
       background-color: #fff;
       color: #000;
 
-      .menu-collapse-icon{
+      .menu-collapse-icon {
         color: #000;
       }
     }
@@ -129,12 +128,12 @@
   color: #f3f3f3;
 }
 
-.sublevel-nav{
+.sublevel-nav {
   list-style: none;
   margin-left: 10px;
 
-  .sublevel-nav-item{
-    .sublevel-nav-link{
+  .sublevel-nav-item {
+    .sublevel-nav-link {
       display: flex;
       align-items: center;
       height: 3rem;
@@ -144,7 +143,7 @@
       transition: all .3s ease;
 
 
-      .sublevel-link-icon{
+      .sublevel-link-icon {
         font-size: 4px;
         width: 2rem;
         min-width: 2rem;
@@ -152,14 +151,55 @@
         text-align: center;
       }
 
-      .sublevel-link-text{
+      .sublevel-link-text {
         margin-left: 0.8rem;
       }
     }
 
-    .sublevel-nav-link:hover{
+    .sublevel-nav-link:hover {
       color: #f3f3f3;
     }
 
   }
+}
+
+// scrollbar and visibility on hover and focus
+
+.scrollwrap {
+  overflow-y: auto;
+  visibility: hidden;
+  height: calc(100% - 3.65rem);
+}
+
+.sidenav-nav,
+.scrollwrap:hover,
+.scrollwrap:focus {
+  visibility: visible;
+}
+
+.scrollwrap_delayed {
+  transition: visibility 0.5s 0.2s;
+}
+
+.scrollwrap_delayed:hover {
+  transition: visibility 0.2s 0.2s;
+}
+
+//work in chrome, edge and safari
+.scrollwrap::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollwrap::-webkit-scrollbar-thumb{
+  background-color: #556268;
+  border-radius: 20px;
+}
+
+.scrollwrap{
+  scrollbar-width: thin;
+  scrollbar-color: #556268 transparent;
 }

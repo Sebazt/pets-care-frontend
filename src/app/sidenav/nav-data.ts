@@ -5,6 +5,7 @@ export const navbarData: INavbarData[] = [
     routeLink: 'servicies',
     icon: 'fa fa-home',
     label: 'Servicies',
+    /* expanded: true,  aquí lo paso t,  y no hay necesidad de expandirlo*/
     items: [
       {
         routeLink: 'servicies/petwalker',
