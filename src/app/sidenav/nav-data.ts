@@ -7,18 +7,18 @@ export const navbarData: INavbarData[] = [
     label: 'Servicies',
     items: [
       {
-        routeLink: 'servicies/',
-        label: 'paseos',
+        routeLink: 'servicies/petwalker',
+        label: 'Pet Walker',
       },
 
       {
-        routeLink: 'servicies/',
-        label: 'guarderia',
+        routeLink: 'servicies/petdaycare',
+        label: 'Pet DayCare',
       },
 
       {
-        routeLink: 'servicies/',
-        label: 'peluqueria',
+        routeLink: 'servicies/petgrooming',
+        label: 'Pet Grooming',
       },
     ],
   },
