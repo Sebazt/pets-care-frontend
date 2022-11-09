@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { INavbarData } from './helper';
+import { fadeInOut, INavbarData } from './helper';
 import { trigger, style, state, transition, animate } from '@angular/animations';
 
 @Component({
@@ -21,7 +21,8 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
           *ngIf="item.items && item.items.length > 0"
         >
           <i class="sublevel-link-icon fa fa-circle"></i>
-          <span class="sublevel-link-text" *ngIf="collapsed">{{item.label}}</span>
+          <span class="sublevel-link-text" @fadeInOut
+                *ngIf="collapsed">{{item.label}}</span>
           <i
             *ngIf="item.items && collapsed"
             class="menu-collapse-icon"
@@ -36,7 +37,8 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
           [routerLinkActiveOptions]="{ exact: true }"
         >
           <i class="sublevel-link-icon fa fa-circle"></i>
-          <span class="sublevel-link-text" *ngIf="collapsed">{{item.label}}</span>
+          <span class="sublevel-link-text" @fadeInOut
+                *ngIf="collapsed">{{item.label}}</span>
         </a>
         <div *ngIf="item.items && item.items.length > 0">
           <app-sublevel-menu>
@@ -51,6 +53,7 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
   `,
   styleUrls: ['./sidenav.component.scss'],
   animations: [
+    fadeInOut,
     trigger('submenu', [
       state(
         'hidden',
