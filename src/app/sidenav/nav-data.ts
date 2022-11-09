@@ -1,8 +1,26 @@
-export const navbarData = [
+import { INavbarData } from "./helper";
+
+export const navbarData: INavbarData[] = [
   {
     routeLink: 'servicies',
     icon: 'fa fa-home',
     label: 'Servicies',
+    items: [
+      {
+        routeLink: 'servicies/',
+        label: 'paseos',
+      },
+
+      {
+        routeLink: 'servicies/',
+        label: 'guarderia',
+      },
+
+      {
+        routeLink: 'servicies/',
+        label: 'peluqueria',
+      },
+    ],
   },
 
   {

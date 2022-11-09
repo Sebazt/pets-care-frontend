@@ -1,7 +1,8 @@
-import { animate, keyframes, style, transition, trigger, state } from '@angular/animations';
+import { animate, keyframes, style, transition, trigger} from '@angular/animations';
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { navbarData } from './nav-data';
 import { Router } from '@angular/router';
+import { INavbarData } from './helper';
 
 interface SideNavToggle{
   screenWidth: number;
@@ -40,6 +41,7 @@ export class SidenavComponent implements OnInit {
   public collapsed: boolean = false;
   public screenWidth = 0;
   public navData = navbarData;
+  public multiple: boolean = false;
 
   constructor(
     private router:Router
@@ -80,5 +82,16 @@ export class SidenavComponent implements OnInit {
 
   public goToHome():void{
     this.router.navigate(['/']);
+  }
+
+  public handleClick(item:INavbarData):void{
+    if(!this.multiple){
+      for(let modelItem of this.navData){
+        if(item !== modelItem && modelItem.expanded){
+          modelItem.expanded = false;
+        }
+      }
+    }
+    item.expanded = !item.expanded;
   }
 }
