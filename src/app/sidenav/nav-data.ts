@@ -3,7 +3,7 @@ import { INavbarData } from "./helper";
 export const navbarData: INavbarData[] = [
   {
     routeLink: 'servicies',
-    icon: 'fa fa-home',
+    icon: 'fa fa-paw',
     label: 'Servicies',
     /* expanded: true,  aquí lo paso t,  y no hay necesidad de expandirlo*/
     items: [
@@ -26,13 +26,13 @@ export const navbarData: INavbarData[] = [
 
   {
     routeLink: 'signup',
-    icon: 'fa fa-box-open',
+    icon: 'fa-solid fa-pencil',
     label: 'Sign up',
   },
 
   {
     routeLink: 'signin',
-    icon: 'fa fa-chart-bar',
+    icon: 'fa-solid fa-user',
     label: 'Sign in',
   },
 
@@ -50,7 +50,7 @@ export const navbarData: INavbarData[] = [
 
   {
     routeLink: 'settings',
-    icon: 'fa-solid fa-shop-lock',
+    icon: 'fa-solid fa-gear',
     label: 'Settings',
   },
 ];
