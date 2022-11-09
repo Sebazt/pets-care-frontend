@@ -34,9 +34,7 @@ export class SidenavComponent implements OnInit {
   public navData = navbarData;
   public multiple: boolean = false;
 
-  constructor(
-    private router:Router
-  ){}
+  constructor(private router: Router) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -49,7 +47,6 @@ export class SidenavComponent implements OnInit {
       });
     }
   }
-
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
@@ -71,18 +68,22 @@ export class SidenavComponent implements OnInit {
     });
   }
 
-  public goToHome():void{
+  public goToHome(): void {
     this.router.navigate(['/']);
   }
 
-  public handleClick(item:INavbarData):void{
-    if(!this.multiple){
-      for(let modelItem of this.navData){
-        if(item !== modelItem && modelItem.expanded){
+  public handleClick(item: INavbarData): void {
+    if (!this.multiple) {
+      for (let modelItem of this.navData) {
+        if (item !== modelItem && modelItem.expanded) {
           modelItem.expanded = false;
         }
       }
     }
     item.expanded = !item.expanded;
+  }
+
+  public getActiveClass(data:INavbarData):string{
+    return this.router.url.includes(data.routeLink) ? 'active' : '';
   }
 }

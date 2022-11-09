@@ -11,7 +11,11 @@ import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'servicies', component: ServicesProductsComponent },
+  {
+    path: 'servicies',
+    loadChildren: () => import('./services-products/services-products.module').then(s => s.ServicesProductsModule)
+    
+  },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'aboutus', component: AboutusComponent },

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { ServicesProductsComponent } from './services-products/services-products.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -22,7 +21,6 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
     AppComponent,
     BodyComponent,
     SidenavComponent,
-    ServicesProductsComponent,
     HomeComponent,
     NotFoundComponent,
     SettingsComponent,

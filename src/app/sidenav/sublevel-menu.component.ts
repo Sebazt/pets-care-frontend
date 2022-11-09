@@ -1,17 +1,30 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { fadeInOut, INavbarData } from './helper';
 import { trigger, style, state, transition, animate } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sublevel-menu',
   template: `
     <ul
       *ngIf="collapsed && data.items && data.items.length > 0"
-      [@submenu]="expanded
-      ? {value: 'visible',
-        params:{transitionParams: '400ms cubic-bezier(0.86, 0, 0.07, 1)', height: '*'}}
-      : {value: 'hidden',
-        params:{transitionParams: '400ms cubic-bezier(0.86, 0, 0.07, 1)', height: '0'}}"
+      [@submenu]="
+        expanded
+          ? {
+              value: 'visible',
+              params: {
+                transitionParams: '400ms cubic-bezier(0.86, 0, 0.07, 1)',
+                height: '*'
+              }
+            }
+          : {
+              value: 'hidden',
+              params: {
+                transitionParams: '400ms cubic-bezier(0.86, 0, 0.07, 1)',
+                height: '0'
+              }
+            }
+      "
       class="sublevel-nav"
     >
       <li *ngFor="let item of data.items" class="sublevel-nav-item">
@@ -19,14 +32,18 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
           class="sublevel-nav-link"
           (click)="handleClick(item)"
           *ngIf="item.items && item.items.length > 0"
+          [ngClass]="getActiveClass(item)"
         >
           <i class="sublevel-link-icon fa fa-circle"></i>
-          <span class="sublevel-link-text" @fadeInOut
-                *ngIf="collapsed">{{item.label}}</span>
+          <span class="sublevel-link-text" @fadeInOut *ngIf="collapsed">{{
+            item.label
+          }}</span>
           <i
             *ngIf="item.items && collapsed"
             class="menu-collapse-icon"
-            [ngClass]="!item.expanded ? 'fa fa-angle-right' : 'fa fa-angle-down'"
+            [ngClass]="
+              !item.expanded ? 'fa fa-angle-right' : 'fa fa-angle-down'
+            "
           ></i>
         </a>
         <a
@@ -37,14 +54,13 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
           [routerLinkActiveOptions]="{ exact: true }"
         >
           <i class="sublevel-link-icon fa fa-circle"></i>
-          <span class="sublevel-link-text" @fadeInOut
-                *ngIf="collapsed">{{item.label}}</span>
+          <span class="sublevel-link-text" @fadeInOut *ngIf="collapsed">{{
+            item.label
+          }}</span>
         </a>
         <div *ngIf="item.items && item.items.length > 0">
           <app-sublevel-menu>
-            [data]="item" <!-- observar -->
-            [collapsed]="collapsed"
-            [multiple]="multiple"
+            [data]="item" [collapsed]="collapsed" [multiple]="multiple"
             [expanded]="item.expanded"
           </app-sublevel-menu>
         </div>
@@ -72,24 +88,23 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
         style({ overflow: 'hidden' }),
         animate('{{transitionParams}}'),
       ]),
-      transition('void => *', animate(0))
-    ])
-  ]
+      transition('void => *', animate(0)),
+    ]),
+  ],
 })
-
 export class SublevelMenuComponent implements OnInit {
   @Input() data: INavbarData = {
     routeLink: '',
     icon: '',
     label: '',
-    items: []
+    items: [],
   };
   @Input() collapsed = false;
   @Input() animating: boolean | undefined;
   @Input() expanded: boolean | undefined;
   @Input() multiple: boolean = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -104,5 +119,11 @@ export class SublevelMenuComponent implements OnInit {
       }
     }
     item.expanded = !item.expanded;
+  }
+
+  public getActiveClass(item: INavbarData): string {
+    return item.expanded && this.router.url.includes(item.routeLink)
+      ? 'active-sublevel'
+      : '';
   }
 }
