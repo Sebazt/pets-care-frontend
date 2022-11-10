@@ -13,6 +13,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -29,6 +30,7 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
     SigninComponent,
     SignupComponent,
     SublevelMenuComponent,
+    FooterComponent,
 
   ],
   imports: [
