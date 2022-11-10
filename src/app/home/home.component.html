@@ -1,9 +1,5 @@
-<h1>Home </h1>
-<div class="card">
-  <div class="card-head"> HOME CHAVAL HOME </div>
-  <div class="card-body">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, laudantium velit labore accusamus modi dolore, numquam aperiam eveniet facilis, maiores alias possimus molestias impedit tempore inventore tenetur libero odit enim?
-  </div>
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<div class="body" [ngClass]="isSideNavCollapsed | sidebarClass : screenWidth">
+  <p>Header</p>
+  <router-outlet></router-outlet>
 </div>
-<img src="../../assets/media/logo.svg" alt="">
-<img src="../../assets/media/logo1.png" alt="">

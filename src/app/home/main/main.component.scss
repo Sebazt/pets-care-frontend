@@ -1,0 +1,10 @@
+@import url("../../../variables.scss");
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+div {
+  color: var(--color-text) !important;
+}
