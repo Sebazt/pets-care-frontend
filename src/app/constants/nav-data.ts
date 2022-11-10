@@ -25,13 +25,13 @@ export const navbarData: INavbarData[] = [
   },
 
   {
-    routeLink: 'signup',
+    routeLink: '/signup',
     icon: 'fa-solid fa-pencil',
     label: 'Sign up',
   },
 
   {
-    routeLink: 'signin',
+    routeLink: '/signin',
     icon: 'fa-solid fa-user',
     label: 'Sign in',
   },
