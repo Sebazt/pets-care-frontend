@@ -1,0 +1,14 @@
+@import "src/app/styles/mixins";
+@import "src/app/styles/variables";
+
+.card{
+  &__head{
+    &__text{
+      @include text(32px, $color-primary, $heavy)
+    }
+
+    &__text-2{
+      @include text(64px, $color-secondary, $medium)
+    }
+  }
+}
