@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { fadeInOut, INavbarData } from './helper';
+import { fadeInOut, INavbarData } from '../../constants/helper';
 import { trigger, style, state, transition, animate } from '@angular/animations';
 import { Router } from '@angular/router';
 
