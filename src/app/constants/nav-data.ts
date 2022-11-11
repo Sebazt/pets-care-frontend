@@ -43,13 +43,13 @@ export const navbarData: INavbarData[] = [
   },
 
   {
-    routeLink: 'admin',
+    routeLink: '/admin',
     icon: 'fa-solid fa-shop-lock',
     label: 'Admin',
   },
 
   {
-    routeLink: 'settings',
+    routeLink: '/settings',
     icon: 'fa-solid fa-gear',
     label: 'Settings',
   },
