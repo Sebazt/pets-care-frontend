@@ -3,40 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BodyComponent } from './body/body.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { SettingsComponent } from './settings/settings.component';
-import { AdminComponent } from './admin/admin.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { SigninComponent } from './signin/signin.component';
-import { SignupComponent } from './signup/signup.component';
-import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
-
-
+import {SignupComponent} from "./pages/signup/signup.component";
+import {SigninComponent} from "./pages/signin/signin.component";
+import {HomeModule} from "./home/home.module";
+import {CommonComponentsModule} from "./common-components/common-components.module";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
-    BodyComponent,
-    SidenavComponent,
-    HomeComponent,
-    NotFoundComponent,
-    SettingsComponent,
-    AdminComponent,
-    AboutusComponent,
     SigninComponent,
     SignupComponent,
-    SublevelMenuComponent,
-
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HomeModule,
+    RouterModule,
+    CommonComponentsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

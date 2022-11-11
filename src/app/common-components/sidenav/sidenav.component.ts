@@ -1,8 +1,8 @@
 import { animate, keyframes, style, transition, trigger} from '@angular/animations';
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
-import { navbarData } from './nav-data';
 import { Router } from '@angular/router';
-import { fadeInOut, INavbarData } from './helper';
+import { navbarData } from '../../constants/nav-data';
+import { fadeInOut, INavbarData } from '../../constants/helper';
 
 interface SideNavToggle{
   screenWidth: number;
