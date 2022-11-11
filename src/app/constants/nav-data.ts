@@ -1,6 +1,13 @@
 import { INavbarData } from "./helper";
 
 export const navbarData: INavbarData[] = [
+
+  {
+    routeLink: '',
+    icon: 'fa-solid fa-house',
+    label: 'Home',
+  },
+
   {
     routeLink: 'home',
     icon: 'fa fa-paw',
@@ -22,6 +29,12 @@ export const navbarData: INavbarData[] = [
         label: 'Pet Grooming',
       },
     ],
+  },
+
+  {
+    routeLink: '/aboutServices',
+    icon: 'fa-solid fa-dog',
+    label: 'Our Services',
   },
 
   {

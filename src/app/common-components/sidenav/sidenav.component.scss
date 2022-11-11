@@ -35,6 +35,8 @@
       font-size: 24px;
       font-weight: 700;
       color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     .btn-close {
@@ -49,7 +51,7 @@
       .fa-times {
         color: #fff;
         font-size: 24px;
-        
+
       }
     }
 
@@ -92,9 +94,10 @@
 
       .sidenav-link-text {
         margin-left: 1.5rem;
+        overflow: hidden;
+        white-space: nowrap;
       }
     }
-
 
     .sidenav-nav-link:hover {
       background-color: #fff;

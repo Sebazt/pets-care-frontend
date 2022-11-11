@@ -22,12 +22,13 @@ const components = [
   MainComponent,
   AboutusComponent,
   AdminComponent,
+  AboutServicesComponent
 ];
 
 @NgModule({
-  declarations: [[...components
-    AboutServicesComponent
-  ]],
+  declarations: [
+    [...components]
+  ],
   imports: [
     CommonModule,
     CommonComponentsModule,
