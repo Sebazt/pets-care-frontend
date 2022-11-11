@@ -8,6 +8,7 @@ import {SigninComponent} from "./pages/signin/signin.component";
 import {HomeModule} from "./home/home.module";
 import {CommonComponentsModule} from "./common-components/common-components.module";
 import {RouterModule} from "@angular/router";
+import {PipesModule} from "./pipes";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {RouterModule} from "@angular/router";
     AppRoutingModule,
     HomeModule,
     RouterModule,
-    CommonComponentsModule
+    CommonComponentsModule,
+    PipesModule
   ],
   bootstrap: [AppComponent]
 })

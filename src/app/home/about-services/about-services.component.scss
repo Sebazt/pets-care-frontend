@@ -1,0 +1,8 @@
+@import "src/app/styles/mixins";
+@import "src/app/styles/variables";
+
+.container {
+  & .title {
+    @include text(35px, $color-secondary, $bold )
+  }
+}

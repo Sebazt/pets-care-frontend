@@ -11,11 +11,22 @@ import {CommonComponentsModule} from "../common-components/common-components.mod
 import {HomeRoutingModule} from "./home-routing.module";
 import {RouterModule} from "@angular/router";
 import {PipesModule} from "../pipes";
+import { AboutServicesComponent } from './about-services/about-services.component';
 
-const components = [HomeComponent, PetwalkerComponent, PetdaycareComponent, PetgroomingComponent, MainComponent, AboutusComponent]
+const components = [
+  HomeComponent,
+  PetwalkerComponent,
+  PetdaycareComponent,
+  PetgroomingComponent,
+  MainComponent,
+  AboutusComponent,
+  AboutServicesComponent
+]
 
 @NgModule({
-  declarations: [[...components]],
+  declarations: [
+    [...components]
+  ],
   imports: [CommonModule, CommonComponentsModule, HomeRoutingModule, RouterModule, PipesModule],
 })
 export class HomeModule {

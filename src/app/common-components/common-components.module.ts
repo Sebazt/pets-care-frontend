@@ -7,7 +7,13 @@ import {SublevelMenuComponent} from "./sidenav/sublevel-menu.component";
 const components = [SidenavComponent, SublevelMenuComponent]
 
 @NgModule({
-  declarations: [...components, ], imports: [CommonModule, RouterLinkActive, RouterLinkWithHref], exports: [...components]
+  declarations: [...components, ],
+  imports: [
+    CommonModule,
+    RouterLinkActive,
+    RouterLinkWithHref
+  ],
+  exports: [...components]
 })
 export class CommonComponentsModule {
 }

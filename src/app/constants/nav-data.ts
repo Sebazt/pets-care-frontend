@@ -25,6 +25,12 @@ export const navbarData: INavbarData[] = [
   },
 
   {
+    routeLink: '/aboutServices',
+    icon: 'fa-regular fa-dog-leashed',
+    label: 'Our Services'
+  },
+
+  {
     routeLink: '/signup',
     icon: 'fa-solid fa-pencil',
     label: 'Sign up',

@@ -6,6 +6,7 @@ import { PetgroomingComponent } from './petgrooming/petgrooming.component';
 import {MainComponent} from "./main/main.component";
 import {HomeComponent} from "./home.component";
 import {AboutusComponent} from "./aboutus/aboutus.component";
+import {AboutServicesComponent} from "./about-services/about-services.component";
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'aboutus',
         component: AboutusComponent,
+      },
+      {
+        path: 'aboutServices',
+        component: AboutServicesComponent
       },
       {
         path: '',
