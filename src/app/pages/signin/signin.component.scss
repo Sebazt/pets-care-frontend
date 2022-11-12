@@ -185,6 +185,21 @@
 }
 
 
+/*responsive*/
 
+@media only screen and (min-width: 0px) and (max-width: 332px) {
+  .text{
+    display:none;
+  }
+  .fa{
+    display:none;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .myRightCtn{
+    display:none;
+  }
+}
 
 
