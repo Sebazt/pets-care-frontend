@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SideNavToggle} from "./interfaces/sidenav-toggle";
 
 
 @Component({
@@ -8,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PetsCare';
+
+  isSideNavCollapsed = false;
+  screenWidth= 0;
+
+  onToggleSideNav(data: SideNavToggle): void {
+    this.screenWidth = data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
+  }
 }
