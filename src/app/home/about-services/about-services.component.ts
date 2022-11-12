@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-services',
   templateUrl: './about-services.component.html',
   styleUrls: ['./about-services.component.scss']
 })
-export class AboutServicesComponent implements OnInit {
+export class AboutServicesComponent {
 
   cards = [
     {
@@ -28,10 +28,5 @@ export class AboutServicesComponent implements OnInit {
       description: 'We pick up your pets at home, we take them to our daycare centers, where they can play with other pets, in a controlled environment and supervised by our caregivers. There they will have all the necessary care such as grooming, feeding and affection they deserve.'
     }
   ]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

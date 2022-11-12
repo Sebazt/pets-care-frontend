@@ -38,6 +38,12 @@ export const navbarData: INavbarData[] = [
   },
 
   {
+    routeLink: '/home/aboutus',
+    icon: 'fa fa-tags',
+    label: 'About us',
+  },
+
+  {
     routeLink: '/signup',
     icon: 'fa-solid fa-pencil',
     label: 'Sign up',
@@ -47,12 +53,6 @@ export const navbarData: INavbarData[] = [
     routeLink: '/signin',
     icon: 'fa-solid fa-user',
     label: 'Sign in',
-  },
-
-  {
-    routeLink: '/home/aboutus',
-    icon: 'fa fa-tags',
-    label: 'About us',
   },
 
   {
