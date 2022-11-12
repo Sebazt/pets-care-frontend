@@ -1,14 +1,49 @@
-<h1>FORMULARIO DE INGRESAR A LA APP</h1>
-<div class="card">
-  <div class="card-head"> SIGN IN </div>
-  <div class="card-body">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, laudantium velit labore accusamus modi dolore, numquam aperiam eveniet facilis, maiores alias possimus molestias impedit tempore inventore tenetur libero odit enim?
-  </div>
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text">@</span>
-  <div class="form-floating">
-    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-    <label for="floatingInputGroup1">Username</label>
+<div class="container">
+  <div class="myCard">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="myLeftCtn">
+
+          <form class="myForm text-center">
+            <header class="title-form">Welcome to Pets Care</header>
+
+            <div class="form-group">
+              <i class="fa fa-user"></i>
+              <input class="myInput" type="text" placeholder="Email" id="email" required>
+            </div>
+
+            <div class="form-group">
+              <i class="fa fa-lock"></i>
+              <input class="myInput" type="password" placeholder="Password" id="password" required>
+            </div>
+
+            <div class="form-group text">
+              <p>¿Don't you have an account?<span (click)="goToSignIn()" class="span-link"> ¡Sign Up!</span></p>
+            </div>
+
+            <div class="btns-signin">
+            <button class="butt" type="submit">Sign in</button>
+
+            <button class="btn-google"><img width="20px" style="margin-bottom:3px; margin-right:5px"
+                                            alt="Google sign-in"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>Sign
+              in with Google
+            </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+
+      <!-- 2do form-->
+
+      <div class="col-md-6">
+        <div class="myRightCtn">
+          <button class="butt_out" (click)="goToHome()">Go to home</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>

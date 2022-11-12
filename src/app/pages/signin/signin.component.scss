@@ -1,0 +1,190 @@
+@import "src/app/styles/variables";
+
+/*contenedors ccs*/
+.container{
+  position: absolute;
+  max-width: 800px;
+  height: 500px;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.myCard{
+  position:relative;
+  background-color:$color;
+  height:100%;
+  border-radius:$border-radius;
+  -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+}
+
+.box{
+  position: relative;
+  margin: 20px;
+  margin-bottom:100px;
+}
+
+.myForm{
+  position:relative;
+  margin-top: 50px;
+}
+
+
+/* second form */
+
+.myRightCtn{
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.9);
+  border-radius:$border-radius;
+  height:100%;
+  padding:25px;
+  color: $color;
+  font-size:$font-size;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.butt_out{
+  background: linear-gradient(45deg, $color-primary, #00a2e8);
+  color: $color;
+  width: 120px;
+  border:none;
+  border-radius:$border-radius;
+  padding:$padding-btn;
+  -webkit-box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  margin-bottom: 40px;
+
+  &:hover{
+    cursor:pointer;
+    background:$color-primary;
+  }
+
+  &:focus{
+    border: 0.2px solid $color;
+    outline: none;
+  }
+}
+
+/* first form */
+
+.myLeftCtn{
+  position: relative;
+  background-color:#fff;
+  border-radius:$border-radius;
+  height:100%;
+  padding:25px;
+  padding-left: 30px;
+
+
+  .myInput{
+    width: 230px;
+    margin: 10px 0;
+    border-radius:$border-radius;
+    padding:10px;
+    padding-left:50px;
+    border: none;
+    -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+    &:focus{
+      outline:none;
+    }
+  }
+
+  .btns-signin{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .text{
+    font-size:$font-size;
+    margin-top: 16px;
+    color:$color-text;
+
+    .span-link{
+      font-weight:$heavy;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .butt{
+    background: linear-gradient(45deg, $color-primary, #00a2e8);
+    color: $color;
+    font-size: $font-size;
+    width:200px;
+    margin: 20px 0 10px 0;
+    border:none;
+    border-radius:$border-radius;
+    padding:10px;
+    -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+    &:hover{
+      cursor:pointer;
+      background:$color-primary;
+    }
+
+    &:focus{
+      border: 0 solid transparent;
+      outline: none;
+    }
+  }
+
+  .title-form{
+    color:$color-primary;
+    font-size:24px;
+    font-weight:$bold;
+    margin-bottom:20px;
+  }
+
+  .fa{
+    position:relative;
+    color: $color-primary;
+    left:40px;
+  }
+}
+
+.btn-google{
+  background-color: rgb(255, 255, 255);
+  color:$color-text;
+  margin: 10px 0;
+  width:200px;
+  border:none;
+  border-radius:25px;
+  padding:10px;
+  -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+  &:hover{
+    background: linear-gradient(45deg, $color-primary, $color-secondary);
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.row{
+  height:100%;
+}
+
+
+
+
+
