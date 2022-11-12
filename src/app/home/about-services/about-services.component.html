@@ -1,0 +1,24 @@
+<div>
+
+  <div class="custom-shape-divider-top-1668203388">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+  </div>
+
+  <h1 class="display-1 fw-bold">Our Services</h1>
+
+  <div *ngFor="let card of cards" class="card mb-5 shadow p-3 mb-5 bg-body rounded" style="max-width: 100%">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="card.img" class="img-fluid rounded-start" [alt]="card.alt">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fs-1 fw-bold">{{card.title}}</h5>
+          <p class="card-text fs-5">{{card.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

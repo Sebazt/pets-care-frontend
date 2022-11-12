@@ -8,6 +8,7 @@ import { HomeComponent } from './home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AdminComponent } from './admin/admin.component';
+import {AboutServicesComponent} from "./about-services/about-services.component";
 
 const routes: Routes = [
   {
@@ -44,6 +45,9 @@ const routes: Routes = [
       {
         path: 'admin',
         component: AdminComponent,
+      },{
+        path: 'aboutServices',
+        component: AboutServicesComponent,
       },
       {
         path: '',

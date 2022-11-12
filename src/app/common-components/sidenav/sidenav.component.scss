@@ -34,7 +34,9 @@
       margin-left: 1.5rem;
       font-size: 24px;
       font-weight: 700;
-      color: #fff;
+      color: $color-white;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     .btn-close {
@@ -47,9 +49,9 @@
       border: none;
 
       .fa-times {
-        color: #fff;
+        color: $color-white;
         font-size: 24px;
-        
+
       }
     }
 
@@ -92,12 +94,13 @@
 
       .sidenav-link-text {
         margin-left: 1.5rem;
+        overflow: hidden;
+        white-space: nowrap;
       }
     }
 
-
     .sidenav-nav-link:hover {
-      background-color: #fff;
+      background-color: $color-white;
       color: #000;
 
       .menu-collapse-icon {
@@ -164,8 +167,11 @@
       }
     }
 
-    .sublevel-nav-link:hover {
-      color: #f3f3f3;
+    .sublevel-nav-link {
+
+      &:hover {
+        color: #f3f3f3;
+      }
     }
 
   }

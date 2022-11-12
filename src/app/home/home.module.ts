@@ -12,6 +12,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../pipes';
 import { AdminComponent } from './admin/admin.component';
+import { AboutServicesComponent } from './about-services/about-services.component';
 
 const components = [
   HomeComponent,
@@ -21,10 +22,13 @@ const components = [
   MainComponent,
   AboutusComponent,
   AdminComponent,
+  AboutServicesComponent
 ];
 
 @NgModule({
-  declarations: [[...components]],
+  declarations: [
+    [...components]
+  ],
   imports: [
     CommonModule,
     CommonComponentsModule,
