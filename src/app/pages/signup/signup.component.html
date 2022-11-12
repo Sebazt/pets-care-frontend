@@ -1,11 +1,60 @@
-<h1>FORM PARA REGISTRAR</h1>
-<div class="card">
-  <div class="card-head"> SIGN UP</div>
-  <div class="card-body">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, laudantium velit labore accusamus modi dolore, numquam aperiam eveniet facilis, maiores alias possimus molestias impedit tempore inventore tenetur libero odit enim?
+<div class="container">
+  <div class="myCard">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="myRightCtn2">
+        <!--  <button class="butt_out" (click)="goToHome()">Go to home</button>  -->
+        </div>
+      </div>
+
+
+      <!-- 2do form     -->
+
+      <div class="col-md-6 ">
+        <div class="myLeftCtn2 test" >
+          <form class="myForm text-center">
+            <header class="title-form"><a (click)="goToHome()">Welcome to Pets Care</a></header>
+
+            <div class="form-group">
+              <i class="fa fa-user"></i>
+              <input class="myInput" type="text" placeholder="Name" id="username" required>
+            </div>
+
+            <div class="form-group">
+              <i class="fa fa-envelope"></i>
+              <input class="myInput" type="text" placeholder="Email" id="email" required>
+            </div>
+
+            <div class="form-group">
+              <i class="fa fa-phone"></i>
+              <input class="myInput" type="text" placeholder="Phone" id="phone" required>
+            </div>
+
+            <div class="form-group">
+              <i class="fa fa-lock"></i>
+              <input class="myInput" type="password" placeholder="Password" id="password" required>
+            </div>
+
+            <div class="form-group text">
+              <p>¿Do you already have an account with us?<span (click)="goToSignIn()" class="span-link"> ¡Sign
+                in!</span></p>
+            </div>
+
+            <div class="btns-signin">
+              <button class="butt" type="submit">Sign up</button>
+
+              <button class="btn-google"><img width="20px" style="margin-bottom:3px; margin-right:5px"
+                                              alt="Google sign-in"
+                                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>Sign
+                up with Google
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
-<p>
-  nombre, email, password, telefono y dirección
-  
-</p>
+

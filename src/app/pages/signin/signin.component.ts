@@ -19,7 +19,7 @@ export class SigninComponent implements OnInit {
     await this.router.navigate(['/']);
   }
 
-  public async goToSignIn():Promise<void>{
+  public async goToSignUp():Promise<void>{
     await this.router.navigate(['/signup'])
   }
 
