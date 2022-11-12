@@ -1,31 +1,16 @@
 @import "src/app/styles/variables";
+@import "src/app/styles/mixins";
 
 .card-title {
   color: darken($color-primary, 10%);
+}
+
+.card-text {
+  @include text(16px, $color-text, $font-family);
 }
 
 .display-1 {
   color: $color-white;
 }
 
-.custom-shape-divider-top-1668203388 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: -1;
-}
 
-.custom-shape-divider-top-1668203388 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 242px;
-  transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1668203388 .shape-fill {
-  fill: $color-primary;
-}

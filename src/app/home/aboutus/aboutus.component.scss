@@ -1,0 +1,29 @@
+@import "src/app/styles/variables";
+@import "src/app/styles/mixins";
+
+.about-us {
+
+  .card {
+
+    .card-text {
+      @include text(16px, $color-text, $font-family);
+    }
+
+    .display-6 {
+      color: $color-primary;
+    }
+  }
+
+  .display-1 {
+    color: $color-white;
+  }
+
+  .creators {
+
+    .display-4 {
+      color: $color-primary;
+    }
+  }
+}
+
+
