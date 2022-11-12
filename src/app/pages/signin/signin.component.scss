@@ -1,0 +1,158 @@
+@import "src/app/styles/variables";
+
+.container{
+  position: absolute;
+  max-width: 800px;
+  height: 500px;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.myRightCtn{
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.9);
+  border-radius:25px;
+  height:100%;
+  padding:25px;
+  color: rgb(192, 192, 192);
+  font-size:12px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  header{
+    color: #fff;
+    font-size:44px;
+  }
+}
+
+.myLeftCtn{
+  position: relative;
+  background-color:#fff;
+  border-radius:25px;
+  height:100%;
+  padding:25px;
+  padding-left: 50px;
+
+  .myInput{
+    width: 230px;
+    margin: 10px;
+    border-radius:25px;
+    padding:10px;
+    padding-left:50px;
+    border: none;
+    -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+    &:focus{
+      outline:none;
+    }
+  }
+
+  .butt{
+    background: linear-gradient(45deg, $color-primary, #00a2e8);
+    color: #fff;
+    width:230px;
+    border:none;
+    border-radius:25px;
+    padding:10px;
+    -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+    &:hover{
+      background: linear-gradient(45deg, $color-primary, $color-secondary);
+    }
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+
+  header{
+    color:$color-primary;
+    font-size:24px;
+    font-weight:$heavy;
+    margin-bottom:20px;
+  }
+
+  .fa{
+    position:relative;
+    color: $color-primary;
+    left:40px;
+  }
+}
+
+.btn-google{
+  background-color: rgb(255, 255, 255);
+  margin: 10px 0;
+  width:230px;
+  border:none;
+  border-radius:25px;
+  padding:10px;
+  -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+  &:hover{
+    background: linear-gradient(45deg, $color-primary, $color-secondary);
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.row{
+  height:100%
+}
+
+.myCard{
+  position:relative;
+  background-color:#fff;
+  height:100%;
+  border-radius:25px;
+  -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+}
+
+.box{
+  position: relative;
+  margin: 20px;
+  margin-bottom:100px;
+}
+
+.myForm{
+  position:relative;
+  margin-top: 50px;
+}
+
+.butt_out{
+  background:transparent;
+  color: #fff;
+  width: 120px;
+  border:1px solid #fff;
+  border-radius:25px;
+  padding:10px;
+  -webkit-box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+
+  &:hover{
+    border: 1px solid #eecbff;
+    cursor:pointer;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}

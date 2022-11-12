@@ -11,4 +11,5 @@ const components = [SidenavComponent, SublevelMenuComponent];
   imports: [CommonModule, RouterLinkActive, RouterLinkWithHref],
   exports: [...components],
 })
-export class CommonComponentsModule {}
+export class CommonComponentsModule {
+}
