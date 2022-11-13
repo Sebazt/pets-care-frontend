@@ -1,10 +1,273 @@
 @import "src/app/styles/variables";
 
-img {
-  width: 300px;
-  height: 300px;
+/* header */
+
+.header_home {
+  weight: 100%;
+  height: 50vh;
+  display: flex;
+  border-radius: $borderR;
+  background-attachment: fixed;
+  background-color: pink;
+  position: relative;
+
+
+  .img-header {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: $borderR;
+    filter: brightness(0.8);
+  }
+
+  .logo-header {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    align-self: center;
+    z-index: 1;
+    margin: 0 0 0 32px;
+  }
 }
 
-div {
-  color: $color-text;
+
+/* Description Hero */
+
+.description {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  min-width: 20vh;
+  margin: 2rem 0;
+
+  h1 {
+    text-align: center;
+    font-weight: $heavier;
+    color: $color-h1;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 8px 0;
+    text-align: center;
+    font-size: 18px;
+    color: $color-text;
+  }
+
+  button {
+    margin: 16px 0 8px 0;
+    align-self: center;
+    padding: 10px 30px;
+    border-radius: $borderR;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: $regular;
+    background-color: $color-secondary;
+    color: $color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #52D814;
+    }
+  }
+}
+
+
+/* Hero Cards */
+
+.cards-services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 90vh;
+  background-color: $color-primary;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: $borderR;
+
+  .cart {
+    position: relative;
+    width: 280px;
+    //height:190px;
+    height: 350px;
+    background-color: $color;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s all ease-in-out;
+
+    &:hover {
+      height: 400px;
+    }
+
+    &:hover .imgBx {
+      width: 160px;
+      height: 160px;
+    }
+
+    .imgBx {
+      position: absolute;
+      left: 50%;
+      top: -50px;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 150px;
+      background-color: $color;
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      transition: 0.5s all ease-in-out;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  .cart .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .cart .content .details {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    transform: translateY(170px);
+  }
+
+  .cart:hover .content .details {
+    transform: translateY(0px);
+  }
+
+  .cart .content .details h2 {
+    font-size: 1.25em;
+    font-weight: $emphasis;
+    color: $color-text;
+    line-height: 1.2em;
+  }
+
+  .cart .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: $medium;
+    opacity: 0.5;
+  }
+
+  .cart .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .cart .content .details .data h3 {
+    font-size: 1em;
+    color: $color-text;
+    line-height: 1.2em;
+    font-weight: $emphasis;
+  }
+
+  .cart .content .details .actionsBtn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cart .content .details .actionsBtn button {
+    padding: 10px 30px;
+    border-radius: $borderR;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: $regular;
+    background-color: $color-secondary;
+    color: $color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #52D814;
+    }
+  }
+
+  .cart .content .details .actionsBtn button:nth-child(2) {
+    border: 1px solid #999;
+    color: #999;
+    background-color: $color;
+  }
+}
+
+
+/* grid */
+.tittle-grid{
+  text-align: center;
+  font-weight: $bold;
+  color: $color-h2;
+  margin-bottom:32px;
+  text-transform: uppercase;
+}
+
+/* blogs and favorite pet in the month */
+
+.section-blog{
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  background-color: $color-primary;
+  align-items:center;
+
+  .blog{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: $color;
+    width: 50%;
+    height: 50vh;
+
+    h3{
+      color: $color-h2;
+      font-weight:$bold;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      text-align: center;
+
+    }
+  }
+
+  .favoritePet{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: red;
+    width: 50%;
+    height: 50vh;
+  }
+
+}
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 842px) {
+  .logo-header {
+    display: none;
+  }
 }

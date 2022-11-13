@@ -38,3 +38,21 @@ body {
     padding: 1rem 1.5rem;
   }
 }
+
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #556268;
+  border-radius: 20px;
+}
+
+
