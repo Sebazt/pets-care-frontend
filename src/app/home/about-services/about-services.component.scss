@@ -13,4 +13,26 @@
   color: $color-white;
 }
 
+@media ( max-width: 550px ) {
 
+  body {
+    padding: 0 !important;
+  }
+
+  .company-img {
+
+    & img {
+      border-radius: unset !important;
+    }
+  }
+
+  .display-1 {
+    font-size: 40px;
+  }
+
+  .card {
+    width: 100% !important;
+
+    padding: 0 !important;
+  }
+}

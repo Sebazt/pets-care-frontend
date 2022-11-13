@@ -38,9 +38,15 @@ export const navbarData: INavbarData[] = [
   },
 
   {
-    routeLink: '/home/aboutus',
+    routeLink: '/aboutus',
     icon: 'fa fa-tags',
     label: 'About us',
+  },
+
+  {
+    routeLink: 'contact',
+    icon: 'fa-solid fa-headset',
+    label: 'Contact',
   },
 
   {

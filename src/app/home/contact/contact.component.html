@@ -1,0 +1,56 @@
+<div class="contact">
+
+  <shape-divider></shape-divider>
+  <h1 class="display-1 fw-bold">Contact</h1>
+
+  <div class="be-in-touch card w-100 shadow p-3 mb-5 bg-body rounded">
+    <img src="./assets/media/cat-contact.jpg" class="card-img-top"  alt="contact img">
+    <div class="card-body">
+      <h1 class="card-title">Be in touch</h1>
+      <p class="card-text">If you have any complain, please let us know. Email: <mark>petscare@pets.com</mark></p>
+    </div>
+  </div>
+
+  <div class="card w-100 shadow p-3 mb-5 bg-body rounded">
+    <div class="mx-auto text-center">
+      <h2 class="display-3">Send a comment</h2>
+    </div>
+    <div class="form-content mx-auto w-50">
+      <form action="" (ngSubmit)="submitForm(commentForm.value)" #commentForm="ngForm">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            email="true"
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            ngModel
+            #email="ngModel"
+            [ngClass]="{'email-invalid': email.invalid && email.dirty, 'email-valid': email.valid}"
+            placeholder="name@example.com"
+            required>
+            <div *ngIf="email.invalid && email.dirty" class="mt-2">
+              Please enter a valid email
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="comment" class="form-label">Write a comment</label>
+          <textarea
+            class="form-control"
+            id="comment"
+            name="comment"
+            ngModel
+            minlength="4"
+            required
+            rows="3"
+            placeholder="Let us know your comment..."></textarea>
+        </div>
+        <div class="mx-auto text-center w-25">
+          <button class="btn btn-primary w-100 p-2" [disabled]="commentForm.invalid" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
