@@ -5,7 +5,7 @@
         <div class="myLeftCtn">
 
           <form class="myForm text-center">
-            <header class="title-form">Welcome to Pets Care</header>
+            <header class="title-form"><a (click)="goToHome()">  Welcome to Pets Care</a></header>
 
             <div class="form-group">
               <i class="fa fa-user"></i>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="form-group text">
-              <p>¿Don't you have an account?<span (click)="goToSignIn()" class="span-link"> ¡Sign Up!</span></p>
+              <p>¿Don't you have an account?<span (click)="goToSignUp()" class="span-link"> ¡Sign Up!</span></p>
             </div>
 
             <div class="btns-signin">
@@ -40,10 +40,10 @@
 
       <div class="col-md-6">
         <div class="myRightCtn">
-          <button class="butt_out" (click)="goToHome()">Go to home</button>
+          <!--  <button class="butt_out" (click)="goToHome()">Go to home</button> -->
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
-</div>
