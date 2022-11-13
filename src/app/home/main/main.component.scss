@@ -48,6 +48,7 @@
     font-weight: $heavier;
     color: $color-h1;
     text-transform: uppercase;
+    letter-spacing: .05em;
   }
 
   p {
@@ -219,6 +220,7 @@
   color: $color-h2;
   margin-bottom:32px;
   text-transform: uppercase;
+  letter-spacing: .05em;
 }
 
 /* blogs and favorite pet in the month */
@@ -226,20 +228,24 @@
 .section-blog{
   display: flex;
   width: 100%;
-  min-height: 60vh;
+  min-height: 66vh;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content:space-around;
   background-color: $color-primary;
   align-items:center;
+  border-radius: $borderR;
 
   .blog{
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
     background-color: $color;
-    width: 50%;
-    height: 50vh;
+    width: 40%;
+    height: 55vh;
+    border-radius: $borderR;
+    overflow: hidden;
 
     h3{
       color: $color-h2;
@@ -247,7 +253,27 @@
       letter-spacing: .05em;
       text-transform: uppercase;
       text-align: center;
+      margin:0 0 8px 0;
+      padding-top: 8px;
+    }
 
+    h4{
+      color: #999;
+      font-weight:$heavy;
+      align-self:flex-end;
+      padding-right: 32px;
+      margin: 4px;
+      padding-bottom:8px;
+    }
+
+    p{
+      color:$color-text;
+      text-align: justify;
+      padding:16px;
+    }
+    p span{
+      color: $color-secondary;
+      font-size:2em;
     }
   }
 
@@ -255,9 +281,40 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color: red;
     width: 50%;
-    height: 50vh;
+    height: 55vh;
+    flex-direction: column;
+
+    .card__head{
+      display: flex;
+      width: 90%;
+      min-height: 20vh;
+      justify-content:space-around;
+      align-items:center;
+      margin-bottom: 16px;
+    }
+
+    .container-imgPet{
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      background-image: url("https://scontent.feoh3-1.fna.fbcdn.net/v/t31.18172-8/18403879_803077486515863_3565784522151187141_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeH2Zc5upn-0LP5zF5mVoStkd4eibN2kxdR3h6Js3aTF1MIqFI96XH4kWWxVrSNsKu_M9y61cuyDOjgOrNx3Yo7H&_nc_ohc=76ATHdmf3c0AX8Jit-a&_nc_ht=scontent.feoh3-1.fna&oh=00_AfBO6yv_MN8LATPdsyTX2M9mo7Pb3_fHJwWUhUtwtjkSmQ&oe=6398C119");
+      background-size:contain;
+      background-position: center;
+    }
+
+    .card__head__text{
+      color: $color-h2;
+      font-weight:$bold;
+      letter-spacing: .07em;
+      order: -3;
+    }
+
+    .card__body{
+      color:$color-text;
+      text-align: center;
+      padding:32px;
+    }
   }
 
 }
