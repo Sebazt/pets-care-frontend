@@ -1,0 +1,219 @@
+@import "src/app/styles/variables";
+
+/*contenedors ccs*/
+.container{
+  position: absolute;
+  max-width: 830px;
+  height: 520px;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.myCard{
+  position:relative;
+  background-color:$color;
+  height:100%;
+  border-radius:$border-radius;
+  -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+}
+
+.box{
+  position: relative;
+  margin: 20px;
+  margin-bottom:100px;
+}
+
+.myForm{
+  position:relative;
+  margin-top: 50px;
+}
+
+
+/* first form */
+
+.myRightCtn2{
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1629898471270-d4f5f525b8dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.8);
+  border-radius:$border-radius;
+  height:100%;
+  padding:25px;
+  color: $color;
+  font-size:$font-size;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.butt_out{
+  background: linear-gradient(45deg, $color-primary, #00a2e8);
+  color: $color;
+  width: 120px;
+  border:none;
+  border-radius:$border-radius;
+  padding:$padding-btn;
+  -webkit-box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 49px -14px rgba(0,0,0,0.7);
+  margin-bottom: 40px;
+
+  &:hover{
+    cursor:pointer;
+    background:$color-primary;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+/* second form */
+
+.myLeftCtn2{
+  position: relative;
+  background-color:$color;
+  border-radius:$border-radius;
+  height:100%;
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+  height: 100%;
+
+
+  .myInput{
+    width: 230px;
+    margin: 8px 0;
+    border-radius:$border-radius;
+    padding:10px;
+    padding-left:50px;
+    border: none;
+    -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+    &:focus{
+      outline:none;
+    }
+  }
+
+  .btns-signin{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .text{
+    font-size:$font-size;
+    margin: 5px 0;
+    color:$color-text;
+
+    .span-link{
+      font-weight:$heavy;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .butt{
+    background: linear-gradient(45deg, $color-primary, #00a2e8);
+    color: $color;
+    font-size: $font-size;
+    width:200px;
+    margin: 5px 0;
+    border:none;
+    border-radius:$border-radius;
+    padding:10px;
+    -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+    box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+    &:hover{
+      cursor:pointer;
+      background:$color-primary;
+    }
+
+    &:focus{
+      border: 0 solid transparent;
+      outline: none;
+    }
+  }
+
+  .title-form{
+    color:$color-primary;
+    font-size:24px;
+    font-weight:$bold;
+    margin-bottom:15px;
+    a{
+      cursor: pointer;
+      text-decoration: none;
+
+    }
+  }
+
+  .fa{
+    position:relative;
+    color: $color-primary;
+    left:40px;
+  }
+}
+
+.btn-google{
+  background-color: rgb(255, 255, 255);
+  color:$color-text;
+  margin-top: 5px;
+  width:200px;
+  border:none;
+  border-radius:25px;
+  padding:10px;
+  -webkit-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  -moz-box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+  box-shadow:0px 10px 40px -10px rgba(0,0,0,0.7);
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.row{
+  height:100%;
+}
+
+
+
+
+/*responsive*/
+
+@media only screen and (min-width: 0px) and (max-width: 366px) {
+  .text{
+    display:none;
+  }
+  .fa{
+    display:none;
+  }
+  .butt{
+    margin-top:10px !important;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .myRightCtn2{
+    display:none;
+  }
+
+  .btn-google{
+    display:none;
+  }
+}
+

@@ -20,4 +20,5 @@ const components = [
   ],
   exports: [...components],
 })
-export class CommonComponentsModule {}
+export class CommonComponentsModule {
+}
