@@ -47,6 +47,7 @@
     text-align: center;
     font-weight: $heavier;
     color: $color-h1;
+    text-transform: uppercase;
   }
 
   p {
@@ -217,7 +218,50 @@
   font-weight: $bold;
   color: $color-h2;
   margin-bottom:32px;
+  text-transform: uppercase;
 }
+
+/* blogs and favorite pet in the month */
+
+.section-blog{
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  background-color: $color-primary;
+  align-items:center;
+
+  .blog{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: $color;
+    width: 50%;
+    height: 50vh;
+
+    h3{
+      color: $color-primary;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      text-align: center;
+
+    }
+  }
+
+  .favoritePet{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: red;
+    width: 50%;
+    height: 50vh;
+  }
+
+}
+
+
 
 
 
