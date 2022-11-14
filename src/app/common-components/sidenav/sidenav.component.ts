@@ -68,10 +68,6 @@ export class SidenavComponent implements OnInit {
     });
   }
 
-  public goToHome(): void {
-    this.router.navigate(['/']);
-  }
-
   public handleClick(item: INavbarData): void {
     this.shrinkItems(item);
     item.expanded = !item.expanded;

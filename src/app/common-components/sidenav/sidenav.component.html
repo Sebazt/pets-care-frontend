@@ -1,7 +1,7 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
 
   <div class="logo-container">
-    <button class="logo" (click)="toggleCollapse()" (click)="goToHome()">P<small>c</small></button>
+    <button class="logo" (click)="toggleCollapse()">P<small>c</small></button>
     <div class="logo-text" @fadeInOut *ngIf="collapsed">Pets Care</div>
     <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
       <i class="fa-solid fa-times fa-xmark"></i>
