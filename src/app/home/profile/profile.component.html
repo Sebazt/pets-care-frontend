@@ -5,12 +5,100 @@
 
   <div>
 
-    <div class="container text-center col">
-      <img src="https://cdn.dribbble.com/users/1577045/screenshots/4914645/media/028d394ffb00cb7a4b2ef9915a384fd9.png?compress=1&resize=400x300&vertical=top" class="row rounded mx-auto d-block" alt="profile picture">
-      <h1 class="row display-3 fw-bold" >My Name</h1>
+    <div class="mx-auto d-block m-0 text-center col">
+      <div class="img-container">
+        <img [src]="user.profile_picture"
+             class="img-fluid row rounded mx-auto d-block shadow p-3 mb-3 bg-body rounded"
+             alt="profile picture">
+      </div>
+      <h4 class="row mx-auto d-block text-center">Welcome:</h4>
+      <h1 class="profile-name mx-auto d-block text-center row display-5 fw-bold">
+        {{user.name}}</h1>
+    </div>
+
+    <div class="container col">
+      <div class="card p-3 shadow mb-3 bg-body rounded">
+        <div class="card-body">
+          <ul class="list-group list-group-flush fs-5">
+            <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
+            <li class="list-group-item"><strong>Phone:</strong> {{user.phone}}</li>
+          </ul>
+
+          <hr>
+
+          <h1 class="display-5 fw-bold">Pets</h1>
+
+          <div class="card">
+            <ul class="pets-container list-group fs-4">
+              <li class="list-group-item" *ngFor="let pet of user.pets">
+                <i class="fa-solid fa-dog"></i>
+                <p>{{pet.name}}</p>
+                <p>{{pet.age}} year</p>
+                <p>{{pet.size}}</p>
+                <button (click)="deletePet(pet.id)" type="button" class="btn-close" aria-label="Close"></button>
+              </li>
+              <li (click)="addPet()" class="add-pet list-group-item active text-center">
+                <p class=" mx-auto d-block text-center">Add pet</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orders-container mx-auto d-block card p-3 shadow bg-body rounded col">
+
+      <div class="container">
+
+        <h1 class="display-4 fw-bold">Orders</h1>
+
+        <div *ngFor="let order of user.orders" class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header"
+                id="headingOne">
+              <button class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne">
+                Id: {{order.id}}
+              </button>
+            </h2>
+            <div id="collapseOne"
+                 class="accordion-collapse collapse show"
+                 aria-labelledby="headingOne"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="fw-bold">Date: </h4>
+                    <p>{{order.date}}</p>
+                  </div>
+                  <div class="col">
+                    <h4 class="fw-bold">Services: </h4>
+                    <div *ngFor="let service of order.services">
+                      <p>{{service}}</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <h4><strong>Total:</strong> {{order.price}}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
   </div>
 
 </div>
+
+
+
+
 

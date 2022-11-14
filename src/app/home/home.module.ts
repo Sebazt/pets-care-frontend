@@ -27,12 +27,13 @@ const components = [
   AdminComponent,
   AboutServicesComponent,
   ContactComponent,
-  ProfileComponent
+  ProfileComponent,
 ];
 
 @NgModule({
   declarations: [
-    [...components],
+    [...components
+  ],
   ],
   imports: [
     CommonModule,
