@@ -1,0 +1,39 @@
+@import "src/app/styles/variables";
+
+.contact {
+  .display-1 {
+    color: $color-white;
+  }
+
+  .btn-primary {
+    background-color: $color-primary !important;
+    border-color: $color-primary !important;
+
+    &:hover {
+      background-color: lighten($color-primary, 10%) !important;
+    }
+
+    &:active {
+      background-color: darken($color-primary, 10%) !important;
+    }
+  }
+}
+
+.email-invalid {
+  border-color: $color-red !important;
+  background-color: $invalid-field !important;
+}
+
+.email-valid {
+  border-color: $color-green !important;
+}
+
+@media ( max-width: 550px ) {
+  .be-in-touch {
+    padding: 0 !important;
+  }
+
+  .form-content {
+    width: 100% !important;
+  }
+}

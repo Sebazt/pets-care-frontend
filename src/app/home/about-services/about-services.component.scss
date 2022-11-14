@@ -1,0 +1,38 @@
+@import "src/app/styles/variables";
+@import "src/app/styles/mixins";
+
+.card-title {
+  color: darken($color-primary, 10%);
+}
+
+.card-text {
+  @include text(16px, $color-text, $font-family);
+}
+
+.display-1 {
+  color: $color-white;
+}
+
+@media ( max-width: 550px ) {
+
+  body {
+    padding: 0 !important;
+  }
+
+  .company-img {
+
+    & img {
+      border-radius: unset !important;
+    }
+  }
+
+  .display-1 {
+    font-size: 40px;
+  }
+
+  .card {
+    width: 100% !important;
+
+    padding: 0 !important;
+  }
+}
