@@ -1,0 +1,70 @@
+@import "src/app/styles/variables";
+
+.admin-container {
+
+  @media ( max-width: 550px ) {
+    .card-body {
+      padding: 0;
+    }
+
+    .container {
+      padding: 0 !important;
+    }
+
+    .list-group-item {
+      font-size: 16px;
+      margin: 0;
+      padding: 5px;
+    }
+  }
+
+  .display-1 {
+    color: $color-white;
+  }
+
+  .img-container {
+
+    & img {
+      width: 200px;
+      height: 200px;
+      border: 0.5px solid gray;
+      border-radius: 50px !important;
+    }
+  }
+
+  .orders-container {
+    min-height: 400px !important;
+  }
+
+  .orders-list {
+    width: 100%;
+  }
+
+  .orders-container {
+    min-height: 400px !important;
+
+    @media ( max-width: 550px ) {
+      div .col {
+        padding: 2px !important;
+      }
+
+      .orders-list {
+        font-size: 16px;
+        margin: 0;
+        padding: 5px;
+
+        & h4 {
+          font-size: 17px;
+          margin: 0;
+        }
+
+        & p {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+
+}
+

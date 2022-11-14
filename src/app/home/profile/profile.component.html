@@ -46,52 +46,52 @@
       </div>
     </div>
 
-    <div class="orders-container mx-auto d-block card p-3 shadow bg-body rounded col">
+    <div class="card mx-auto d-block card p-3 shadow bg-body rounded orders-container">
 
-      <div class="container">
+      <div class="mx-auto d-block p-3 card-body container">
 
         <h1 class="display-4 fw-bold">Orders</h1>
 
-        <div *ngFor="let order of user.orders" class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header"
-                id="headingOne">
-              <button class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne">
-                Id: {{order.id}}
-              </button>
-            </h2>
-            <div id="collapseOne"
-                 class="accordion-collapse collapse show"
-                 aria-labelledby="headingOne"
-                 data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col">
-                    <h4 class="fw-bold">Date: </h4>
-                    <p>{{order.date}}</p>
-                  </div>
-                  <div class="col">
-                    <h4 class="fw-bold">Services: </h4>
-                    <div *ngFor="let service of order.services">
-                      <p>{{service}}</p>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <h4><strong>Total:</strong> {{order.price}}</h4>
+        <ul class="list-group list-group-numbered">
+
+          <li *ngFor="let order of user.orders" class="list-group-item align-items-start">
+
+            <div class="d-flex justify-content-between mx-auto d-block">
+
+              <div class="fw-bold">Id: {{order.id}}</div>
+
+              <div class="row orders-list">
+                <div class="col">
+                  <h4 class="fw-bold">Date: </h4>
+                  <p>{{order.date}}</p>
+                </div>
+                <div class="col">
+                  <h4 class="fw-bold">Starts at: </h4>
+                  <p>{{order.starts_at}}</p>
+                </div>
+                <div class="col">
+                  <h4 class="fw-bold">Finish at: </h4>
+                  <p>{{order.finish_at}}</p>
+                </div>
+                <div class="col">
+                  <h4 class="fw-bold">Services: </h4>
+                  <div *ngFor="let service of order.services">
+                    <p>{{service}}</p>
                   </div>
                 </div>
+                <div class="col">
+                  <h4><strong>Total:</strong> {{order.price}}</h4>
+                </div>
               </div>
-            </div>
-          </div>
 
-        </div>
+            </div>
+
+          </li>
+
+        </ul>
 
       </div>
+
     </div>
 
   </div>
