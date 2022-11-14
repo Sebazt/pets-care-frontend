@@ -153,6 +153,63 @@
 
 
 
+/* Responsive */
+@media only screen and (min-width: 0px) and (max-width: 425px) {
+  .header_home{
+    h1{
+      display: none;
+    }
+  }
+
+  .description-hero{
+    p{
+    padding:0;
+    }
+  }
+
+  .maincontainer{
+    min-height:100vh;
+  }
+  .thefront p{
+    padding:0px !important;
+  }
+
+  .thecard{
+    margin: 12px 0;
+  }
+
+  .form-contain, .botn-submit{
+    display:none;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 748px) {
+
+  .maincontainer{
+    min-height:100vh;
+  }
+
+  .thecard{
+    margin: 12px 0;
+  }
+
+  .form-contain, .botn-submit{
+    display:none;
+  }
+}
+
+@media only screen and (min-width: 748px) and (max-width: 1024px) {
+
+  .maincontainer{
+    min-height:100vh;
+  }
+
+  .thecard{
+    margin: 12px 0;
+  }
+
+}
+
 
 
 
