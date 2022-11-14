@@ -68,8 +68,8 @@ export const navbarData: INavbarData[] = [
   },
 
   {
-    routeLink: '/settings',
-    icon: 'fa-solid fa-gear',
-    label: 'Settings',
+    routeLink: '/profile',
+    icon: 'fa-solid fa-user',
+    label: 'Profile',
   },
 ];

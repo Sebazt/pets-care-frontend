@@ -15,6 +15,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AboutServicesComponent } from './about-services/about-services.component';
 import { ContactComponent } from './contact/contact.component';
 import {FormsModule} from "@angular/forms";
+import {ProfileComponent} from "./profile/profile.component";
 
 const components = [
   HomeComponent,
@@ -25,7 +26,8 @@ const components = [
   AboutusComponent,
   AdminComponent,
   AboutServicesComponent,
-  ContactComponent
+  ContactComponent,
+  ProfileComponent
 ];
 
 @NgModule({

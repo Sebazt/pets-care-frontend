@@ -6,10 +6,10 @@ import { PetgroomingComponent } from './petgrooming/petgrooming.component';
 import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { SettingsComponent } from './settings/settings.component';
 import { AdminComponent } from './admin/admin.component';
 import {AboutServicesComponent} from "./about-services/about-services.component";
 import {ContactComponent} from "./contact/contact.component";
+import {ProfileComponent} from "./profile/profile.component";
 
 const routes: Routes = [
   {
@@ -40,8 +40,8 @@ const routes: Routes = [
         component: AboutusComponent,
       },
       {
-        path: 'settings',
-        component: SettingsComponent,
+        path: 'profile',
+        component: ProfileComponent,
       },
       {
         path: 'admin',
