@@ -36,6 +36,8 @@ export class ProfileComponent implements OnInit {
       {
         id: '41241241',
         date: '21/03/2000',
+        starts_at: '12:00 pm',
+        finish_at: '1:00 pm',
         price: 15.000,
         services: [
           'Pet Walker',
@@ -46,6 +48,8 @@ export class ProfileComponent implements OnInit {
       {
         id: '4124124',
         date: '21/03/2000',
+        starts_at: '12:00 pm',
+        finish_at: '1:00 pm',
         price: 15.000,
         services: [
           'Pet Walker',
@@ -56,6 +60,8 @@ export class ProfileComponent implements OnInit {
       {
         id: '4124124',
         date: '21/03/2000',
+        starts_at: '12:00 pm',
+        finish_at: '1:00 pm',
         price: 15.000,
         services: [
           'Pet Walker',
