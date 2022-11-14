@@ -4,7 +4,6 @@
 .about-us {
 
   .card {
-
     .card-text {
       @include text(16px, $color-text, $font-family);
     }
@@ -19,6 +18,21 @@
   }
 
   .creators {
+
+    .creators-content {
+      display: flex;
+      flex-direction: row;
+    }
+    @media ( max-width: 550px ) {
+      .creators-content {
+        flex-direction: column;
+
+        .me-4 {
+          margin-right: 0 !important;
+        }
+
+      }
+    }
 
     .display-4 {
       color: $color-primary;

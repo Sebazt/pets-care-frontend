@@ -9,6 +9,7 @@ import {HomeModule} from "./home/home.module";
 import {CommonComponentsModule} from "./common-components/common-components.module";
 import {RouterModule} from "@angular/router";
 import {PipesModule} from "./pipes";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {PipesModule} from "./pipes";
     HomeModule,
     RouterModule,
     CommonComponentsModule,
-    PipesModule
+    PipesModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })
