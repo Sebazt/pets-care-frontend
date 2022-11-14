@@ -1,0 +1,138 @@
+@import "src/app/styles/variables";
+
+/* header */
+.header_home {
+  weight: 100%;
+  height: 70vh;
+  display: flex;
+  border-radius: $borderR;
+  background-attachment: fixed;
+  position: relative;
+  justify-content: center;
+
+  .img-header {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: $borderR;
+    filter: brightness(0.7);
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: $heavier;
+    color: $color;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    position: absolute;
+    align-self: center;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 35%);
+  }
+
+}
+
+/* Description */
+.description-hero {
+  display: flex;
+  weight: 100%;
+  min-height: 40vh;
+
+
+  p {
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: $emphasis;
+    color: $color-text-services;
+    padding: 10px 50px;
+    text-align: center;
+  }
+}
+
+/* cards */
+
+
+.maincontainer {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .thecard {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    border-radius: $borderR;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    .thefront {
+      display:flex;
+      align-items:center;
+      text-align: center;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: $borderR;
+      backface-visibility: hidden;
+      overflow: hidden;
+      background: $color;
+      color: $color-text;
+
+      .logo-services{
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .theback {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: $borderR;
+      backface-visibility: hidden;
+      overflow: hidden;
+      background: #fafafa;
+      text-align: center;
+      transform: rotateY(180deg);
+
+      .img-cards{
+        object-fit: cover;
+        width: 280px;
+        height: 280px;
+      }
+    }
+    .thefront p {
+      font-family: 'zilla slab', sans-serif;
+      padding: 30px;
+      font-weight: normal;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
