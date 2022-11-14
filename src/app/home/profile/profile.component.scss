@@ -6,4 +6,50 @@
     color: $color-white;
   }
 
+  .img-container {
+
+     & img {
+       width: 200px;
+       height: 200px;
+       border: 0.5px solid gray;
+       border-radius: 50px !important;
+     }
+  }
+
+  .pets-container {
+
+    & p {
+      margin: 0;
+    }
+
+    & li {
+      display: grid;
+      grid-template-columns: 23% 23% 23% 23% 8%;
+    }
+
+    & li:last-child {
+      grid: unset;
+    }
+
+    .add-pet {
+      border-color: darken($color-primary, 20%);
+      background-color: darken($color-primary, 5%);
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($color-primary, 0.5%);
+      }
+
+      &:active {
+        background-color: darken($color-primary, 5%)
+      }
+    }
+
+  }
+
+  .orders-container {
+    min-height: 400px !important;
+  }
+
 }
+
