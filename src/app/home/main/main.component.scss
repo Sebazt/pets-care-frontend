@@ -356,10 +356,13 @@
     border-radius: $borderR;
     margin:auto 0;
     order: -2;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
   }
 
   .btn-contact{
-    position:absolute;
+    margin-top:12px;
     padding: 10px 30px;
     border-radius: $borderR;
     border: none;
@@ -369,8 +372,7 @@
     background-color: $color-secondary;
     color: $color;
     cursor: pointer;
-    bottom:0;
-    right:50%;
+
     &:hover {
       background-color: #52D814;
     }
@@ -395,8 +397,149 @@
 
 /* responsive */
 
-@media only screen and (min-width: 0px) and (max-width: 842px) {
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+  .section-blog{
+    display:none !important;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 510px) {
+  .cart{
+    margin: 50px 30px;
+  }
   .logo-header {
     display: none;
   }
+  .blog{
+    width: 100% !important;
+    height:66vh !important;
+
+    p{
+      padding:0px !important;
+    }
+  }
+  .container-imgPet{
+    display:none;
+  }
+
+  #carouselExampleControls, .img-svg{
+    display:none;
+  }
+
+  .contac-home{
+    min-height:20vh !important;
+
+  }
+  .carrusel-Bt{
+    height:0 !important;
+  }
+
+  .favoritePet{
+    display:none !important;
+  }
+
+  .cards-services{
+    display:none !important;
+  }
 }
+
+@media only screen and (min-width: 511px) and (max-width: 600px) {
+  .cart{
+    margin: 50px 30px;
+  }
+  .logo-header {
+    display: none;
+  }
+  .blog{
+    width: 100% !important;
+    height:66vh !important;
+
+    p{
+      padding:0px !important;
+    }
+  }
+  .container-imgPet{
+    display:none;
+  }
+
+  #carouselExampleControls, .img-svg{
+    display:none;
+  }
+
+  .contac-home{
+    min-height:20vh !important;
+
+  }
+  .carrusel-Bt{
+    height:0 !important;
+  }
+
+  .favoritePet{
+    display:none !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 855px) {
+  .cart{
+    margin: 50px 30px;
+  }
+  .logo-header {
+    display: none;
+  }
+  .blog{
+    width: 100% !important;
+  }
+  .container-imgPet{
+    display:none;
+  }
+
+  #carouselExampleControls, .img-svg{
+    display:none;
+  }
+
+  .contac-home{
+    min-height:20vh !important;
+  }
+  .carrusel-Bt{
+    height:0 !important;
+  }
+}
+
+@media only screen and (min-width: 856px) and (max-width: 940px) {
+  .blog{
+    width: 100% !important;
+  }
+  .cart{
+    margin: 50px 30px;
+  }
+
+  .contac-home{
+    min-height:20vh !important;
+  }
+  .carrusel-Bt{
+    height:0 !important;
+  }
+
+  .container-imgPet, .img-svg{
+    display:none;
+  }
+
+  #carouselExampleControls{
+    display:none;
+  }
+}
+
+@media only screen and (min-width: 941px) and (max-width: 1032px) {
+  .cart{
+    margin: 30px;
+  }
+
+  .blog{
+    width: 100% !important;
+  }
+
+  .container-imgPet{
+    margin-top: 20px;
+  }
+}
+
