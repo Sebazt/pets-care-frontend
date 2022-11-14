@@ -50,8 +50,6 @@
 }
 
 /* cards */
-
-
 .maincontainer {
   width: 100%;
   height: 320px;
@@ -129,7 +127,29 @@
 }
 
 
+/* forms */
+.form-contain{
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+}
+.botn-submit{
+  margin: 16px 0 8px 0;
+  align-self: center;
+  padding: 10px 30px;
+  border-radius: $borderR;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: $regular;
+  background-color: $color-secondary;
+  color: $color;
+  cursor: pointer;
 
+  &:hover {
+    background-color: #52D814;
+  }
+}
 
 
 
