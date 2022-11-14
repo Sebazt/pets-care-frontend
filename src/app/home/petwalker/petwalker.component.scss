@@ -181,6 +181,9 @@
   .form-contain, .botn-submit{
     display:none;
   }
+  .none{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 748px) {
@@ -196,6 +199,9 @@
   .form-contain, .botn-submit{
     display:none;
   }
+  .none{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 748px) and (max-width: 1024px) {
@@ -208,6 +214,9 @@
     margin: 12px 0;
   }
 
+  .none{
+    display: none;
+  }
 }
 
 
