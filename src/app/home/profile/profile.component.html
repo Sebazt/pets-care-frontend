@@ -12,8 +12,12 @@
              alt="profile picture">
       </div>
       <h4 class="row mx-auto d-block text-center">Welcome:</h4>
-      <h1 class="profile-name mx-auto d-block text-center row display-5 fw-bold">
-        {{user.name}}</h1>
+      <div class="user-name">
+        <h1 class="profile-name mx-auto d-block text-center row display-5 fw-bold">
+          {{user.name}}
+          <a routerLink="/home/editProfile"><i class="fa-solid fa-user-pen"></i></a>
+        </h1>
+      </div>
     </div>
 
     <div class="container col">
@@ -96,6 +100,24 @@
 
   </div>
 
+</div>
+
+<div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 

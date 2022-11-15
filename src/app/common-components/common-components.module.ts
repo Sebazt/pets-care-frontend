@@ -6,12 +6,14 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 import {ShapeDividerComponent} from "./shape-divider/shape-divider.component";
 import {AddPetComponent} from "./add-pet/add-pet.component";
 import {FormsModule} from "@angular/forms";
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 const components = [
   SidenavComponent,
   SublevelMenuComponent,
   ShapeDividerComponent,
-  AddPetComponent
+  AddPetComponent,
+  EditProfileComponent
 ];
 
 @NgModule({
