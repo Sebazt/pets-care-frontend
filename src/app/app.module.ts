@@ -10,6 +10,7 @@ import {CommonComponentsModule} from "./common-components/common-components.modu
 import {RouterModule} from "@angular/router";
 import {PipesModule} from "./pipes";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule} from "@angular/forms";
     RouterModule,
     CommonComponentsModule,
     PipesModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

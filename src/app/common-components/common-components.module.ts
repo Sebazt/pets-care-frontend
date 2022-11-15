@@ -7,6 +7,7 @@ import {ShapeDividerComponent} from "./shape-divider/shape-divider.component";
 import {AddPetComponent} from "./add-pet/add-pet.component";
 import {FormsModule} from "@angular/forms";
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import {ProfileService} from "../services/profile-service.service";
 
 const components = [
   SidenavComponent,
@@ -25,6 +26,9 @@ const components = [
     FormsModule
   ],
   exports: [...components],
+  providers: [
+    ProfileService
+  ]
 })
 export class CommonComponentsModule {
 }

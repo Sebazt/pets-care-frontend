@@ -41,7 +41,7 @@
                 <p>{{pet.size}}</p>
                 <button (click)="deletePet(pet.id)" type="button" class="btn-close" aria-label="Close"></button>
               </li>
-              <li (click)="addPet()" class="add-pet list-group-item active text-center">
+              <li routerLink="/addPet" class="add-pet list-group-item active text-center">
                 <p class=" mx-auto d-block text-center">Add pet</p>
               </li>
             </ul>
@@ -67,15 +67,15 @@
               <div class="row orders-list">
                 <div class="col">
                   <h4 class="fw-bold">Date: </h4>
-                  <p>{{order.date}}</p>
+                  <p>{{order.date | date:'medium'}}</p>
                 </div>
                 <div class="col">
                   <h4 class="fw-bold">Starts at: </h4>
-                  <p>{{order.starts_at}}</p>
+                  <p>{{order.starts_at | date:'medium'}}</p>
                 </div>
                 <div class="col">
                   <h4 class="fw-bold">Finish at: </h4>
-                  <p>{{order.finish_at}}</p>
+                  <p>{{order.finish_at | date:'medium'}}</p>
                 </div>
                 <div class="col">
                   <h4 class="fw-bold">Services: </h4>
@@ -84,7 +84,9 @@
                   </div>
                 </div>
                 <div class="col">
-                  <h4><strong>Total:</strong> {{order.price}}</h4>
+                  <h4>
+                    <strong>Total:</strong> {{order.price | currency:'COP':'symbol':'3.0'}}
+                  </h4>
                 </div>
               </div>
 
@@ -100,24 +102,6 @@
 
   </div>
 
-</div>
-
-<div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
 
 
