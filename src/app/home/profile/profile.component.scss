@@ -16,6 +16,7 @@
       margin: 0;
       padding: 5px;
     }
+
   }
 
   .display-1 {
@@ -40,7 +41,7 @@
 
     & li {
       display: grid;
-      grid-template-columns: 23% 23% 23% 23% 8%;
+      grid-template-columns: 19% 19% 19% 19% 19% 5%;
     }
 
     & li:last-child {
@@ -62,9 +63,38 @@
     }
 
   }
+  .orders-container {
+    min-height: 400px !important;
+  }
+
+  .orders-list {
+    width: 100%;
+  }
 
   .orders-container {
     min-height: 400px !important;
+
+    @media ( max-width: 550px ) {
+      div .col {
+        padding: 2px !important;
+      }
+
+      .orders-list {
+        font-size: 16px;
+        margin: 0;
+        padding: 5px;
+
+        & h4 {
+          font-size: 17px;
+          margin: 0;
+        }
+
+        & p {
+          margin: 0;
+        }
+      }
+    }
+
   }
 
 }
