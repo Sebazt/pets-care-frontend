@@ -63,10 +63,6 @@
     }
 
   }
-  .orders-container {
-    min-height: 400px !important;
-  }
-
   .orders-list {
     width: 100%;
   }
@@ -97,5 +93,12 @@
 
   }
 
+}
+
+.profile-name {
+
+  & a {
+    font-size: 20px;
+  }
 }
 
