@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Route, Router} from "@angular/router";
 
 @Component({
   selector: 'app-settings',
@@ -72,7 +73,9 @@ export class ProfileComponent implements OnInit {
     ]
   }
 
-  constructor() { }
+  constructor(
+    private readonly router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -80,12 +83,10 @@ export class ProfileComponent implements OnInit {
   deletePet(value: any) {
 
     // TODO: Eliminar una mascota
-
+    alert('Pet deleted');
   }
 
   addPet() {
-    console.log('works')
-    // TODO: Agregar una mascota
 
   }
 
