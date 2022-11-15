@@ -72,7 +72,7 @@
 
     @media ( max-width: 550px ) {
       div .col {
-        padding: 2px !important;
+        padding: 0 !important;
       }
 
       .orders-list {
@@ -99,6 +99,28 @@
 
   & a {
     font-size: 20px;
+  }
+}
+
+@media ( max-width: 550px ) {
+  .orders-container {
+    padding: 0 !important;
+  }
+
+  .pets-container-pre > div {
+    padding: 0 !important;
+  }
+
+  .pets-list {
+    margin-bottom: 0 !important;
+  }
+
+  .list-group-flush {
+    margin: 10px 15px;
+  }
+
+  .display-5 {
+    margin: 0 10px 5px 10px !important;
   }
 }
 

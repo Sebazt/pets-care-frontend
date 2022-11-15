@@ -8,3 +8,14 @@
 .display-1 {
   color: $color-white;
 }
+
+@media ( max-width: 550px ) {
+  .form-content {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .button-container {
+    width: 100% !important;
+  }
+}

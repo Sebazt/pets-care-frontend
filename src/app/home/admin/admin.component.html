@@ -26,7 +26,7 @@
 
       <ul class="list-group list-group-numbered">
 
-        <li *ngFor="let order of orders" class="list-group-item align-items-start">
+        <li *ngFor="let order of user.orders" class="list-group-item align-items-start">
 
           <div class="d-flex justify-content-between mx-auto d-block">
 
@@ -35,15 +35,15 @@
             <div class="row orders-list">
               <div class="col">
                 <h4 class="fw-bold">Date: </h4>
-                <p>{{order.date}}</p>
+                <p>{{order.date | date:'medium'}}</p>
               </div>
               <div class="col">
                 <h4 class="fw-bold">Starts at: </h4>
-                <p>{{order.starts_at}}</p>
+                <p>{{order.starts_at | date:'medium'}}</p>
               </div>
               <div class="col">
                 <h4 class="fw-bold">Finish at: </h4>
-                <p>{{order.finish_at}}</p>
+                <p>{{order.finish_at | date:'medium'}}</p>
               </div>
               <div class="col">
                 <h4 class="fw-bold">Services: </h4>
@@ -52,7 +52,7 @@
                 </div>
               </div>
               <div class="col">
-                <h4><strong>Total:</strong> {{order.price}}</h4>
+                <h4><strong>Total:</strong> {{order.price | currency:'COP':'symbol':'3.0'}}</h4>
               </div>
             </div>
 
