@@ -74,6 +74,16 @@ export class ProfileService {
           'Pet Grooming'
         ]
       }
+    ],
+    comments: [
+      {
+        id: 'string',
+        created_at: new Date(),
+        last_updated_at: new Date(),
+        points: 5,
+        comment: 'lorem ipsum',
+        author: 'Author id'
+      }
     ]
   }
 

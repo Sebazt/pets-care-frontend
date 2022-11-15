@@ -11,12 +11,13 @@ import {ProfileService} from "../../services/profile-service.service";
 export class ProfileComponent implements OnInit {
 
   user: User = {
-    email: "",
+    profile_picture: "",
     name: "",
-    orders: [],
-    pets: [],
     phone: "",
-    profile_picture: ""
+    email: "",
+    pets: [],
+    orders: [],
+    comments: [],
   };
 
   constructor(

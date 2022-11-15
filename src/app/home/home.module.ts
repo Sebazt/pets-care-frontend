@@ -18,6 +18,7 @@ import {FormsModule} from "@angular/forms";
 import {ProfileComponent} from "./profile/profile.component";
 import {ProfileService} from "../services/profile-service.service";
 import {HttpClientModule} from "@angular/common/http";
+import {CommentService} from "../services/comment.service";
 
 const components = [
   HomeComponent,
@@ -47,7 +48,8 @@ const components = [
     HttpClientModule
   ],
   providers: [
-    ProfileService
+    ProfileService,
+    CommentService
   ],
 })
 export class HomeModule {}
