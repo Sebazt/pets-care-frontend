@@ -7,7 +7,7 @@
   <h1>Pets Care</h1>
   <p>We are pioneers in the care and handling of pets, we have excellent facilities where your furry friends will be
     welcome and will be in the best hands. </p>
-  <button>Go to services</button>
+  <button (click)="goToService()">Go to services</button>
 </section>
 
 <section class="cards-services">
@@ -26,7 +26,7 @@
         </div>
 
         <div class="actionsBtn">
-          <button>See more</button>
+          <button (click)="goToPetDayCare()">See more</button>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="actionsBtn">
-          <button>See more</button>
+          <button (click)="goToPetWalker()">See more</button>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@
         </div>
 
         <div class="actionsBtn">
-          <button>See more</button>
+          <button (click)="goToPetGrooming()">See more</button>
         </div>
       </div>
     </div>
@@ -134,10 +134,8 @@
 <section class="section-blog">
   <article class="blog">
     <h3> Our testimonials</h3>
-    <p><span>"</span> Son la hostia Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Aspernatur atque aut corporis dolores exercitationem facere fugiat, illo iure, laudantium libero,
-      necessitatibus neque nihil placeat praesentium quis recusandae sapiente temporibus ut!
-      asassssssssssssssssssssssssssasasasasasasssasasass</p>
+    <p><span>"</span> Ustedes son los mejores, el mejor servicio y los mejores
+      profesionales del campo, salvaron a mi cachorrito./p>
     <h4>Eren Yaeger</h4>
   </article>
 
@@ -190,8 +188,9 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <button class="btn-contact">Contact us</button>
   </div>
-  <button class="btn-contact">Contact us</button>
+
 </section>
 
 
