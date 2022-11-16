@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {CommentInterface} from "../../assets/utils/interfaces/comment.interface";
 
 @Injectable({
@@ -7,35 +7,32 @@ import {CommentInterface} from "../../assets/utils/interfaces/comment.interface"
 })
 export class CommentService {
 
-  comment: CommentInterface = {
-    id: "",
-    author: "",
-    comment: "",
-    points: 0,
-    created_at: new Date(),
-    last_updated_at: new Date(),
-  }
+  url = 'http://localhost:5001/api/comments';
 
-  url = '';
+  auth_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkNDMyNmM0LTNjODItNDhkNi1hYzM3LTc4NmU0NmQxYTBhZCIsImlhdCI6MTY2ODYxOTEzOCwiZXhwIjoxNjY4NjE5NzM4fQ.uIjmcWzg68TTfXw8cOTlycIZ3m90oGjF9nVV8aDZQZE '
+
+  comment: CommentInterface = {
+    comment: "",
+    points: 0
+  }
 
   constructor(
     private readonly http: HttpClient
   ) {
   }
 
-  async getComments() {
-    return this.http.get(this.url)
-      .subscribe({
-        next: res => res,
-        error: e => alert(e)
-      });
+  postComment(comment: CommentInterface) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.auth_token}`
+    });
+
+    const body = JSON.stringify(comment);
+
+    this.http.post(
+      `${this.url}`,
+      body,
+      {headers: headers}).subscribe();
   }
 
-  getUserTest() {
-    return this.comment;
-  }
-
-  deletePetFromUser() {
-    return 'delete'
-  }
 }

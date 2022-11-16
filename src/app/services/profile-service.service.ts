@@ -1,107 +1,32 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {User} from "../../assets/utils/interfaces/user.interface";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
 
-  url = 'localhost:5001';
+  url = 'http://localhost:5001/api/users';
 
-  user: User = {
-    profile_picture: 'https://cdn.dribbble.com/users/1577045/screenshots/4914645/media/028d394ffb00cb7a4b2ef9915a384fd9.png?compress=1&resize=400x300&vertical=top',
-    name: 'User',
-    email: 'some@gmail.com',
-    phone: '312332322',
-    pets: [
-      {
-        pet_photo: '',
-        id: '',
-        name: 'Michi',
-        age: 6,
-        size: 25.6,
-      },
-      {
-        pet_photo: '',
-        id: '',
-        name: 'Michi',
-        age: 6,
-        size: 25.6,
-      },
-      {
-        pet_photo: '',
-        id: '',
-        name: 'Michi',
-        age: 6,
-        size: 25.6,
-      }
-    ],
-    orders: [
-      {
-        id: '41241241',
-        date: new Date(),
-        starts_at: new Date(),
-        finish_at: new Date(),
-        price: 15000,
-        services: [
-          'Pet Walker',
-          'Pet DayCare',
-          'Pet Grooming'
-        ]
-      },
-      {
-        id: '4124124',
-        date: new Date(),
-        starts_at: new Date(),
-        finish_at: new Date(),
-        price: 15000,
-        services: [
-          'Pet Walker',
-          'Pet DayCare',
-          'Pet Grooming'
-        ]
-      },
-      {
-        id: '4124124',
-        date: new Date(),
-        starts_at: new Date(),
-        finish_at: new Date(),
-        price: 15000,
-        services: [
-          'Pet Walker',
-          'Pet DayCare',
-          'Pet Grooming'
-        ]
-      }
-    ],
-    comments: [
-      {
-        id: 'string',
-        created_at: new Date(),
-        last_updated_at: new Date(),
-        points: 5,
-        comment: 'lorem ipsum',
-        author: 'Author id'
-      }
-    ]
-  }
+  id= 'ad4326c4-3c82-48d6-ac37-786e46d1a0ad'
+
+  auth_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkNDMyNmM0LTNjODItNDhkNi1hYzM3LTc4NmU0NmQxYTBhZCIsImlhdCI6MTY2ODYxOTEzOCwiZXhwIjoxNjY4NjE5NzM4fQ.uIjmcWzg68TTfXw8cOTlycIZ3m90oGjF9nVV8aDZQZE '
 
   constructor(
     private readonly http: HttpClient
   ) {
   }
 
-  async getUser() {
-    return this.http.get(this.url)
-      .subscribe({
-        next: res => res,
-        error: e => alert(e)
-      });
-  }
-
-  getUserTest() {
-    return this.user;
+  getUser(): Observable<User> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.auth_token}`
+    });
+    return this.http.get<User>(
+      `${this.url}/${this.id}`,
+      {headers: headers});
   }
 
   deletePetFromUser() {
