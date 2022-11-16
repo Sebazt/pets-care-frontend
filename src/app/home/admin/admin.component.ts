@@ -11,13 +11,17 @@ import {ProfileService} from "../../services/profile-service.service";
 export class AdminComponent implements OnInit {
 
   user: User = {
-    profile_picture: "",
-    name: "",
-    phone: "",
-    email: "",
-    pets: [],
-    orders: [],
+    addresses: [],
     comments: [],
+    created_at: "",
+    email: "",
+    id: "",
+    name: "",
+    orders: [],
+    pets: [],
+    phone: "",
+    profile_picture: "",
+    roles: ""
   };
 
   constructor(
@@ -26,7 +30,12 @@ export class AdminComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.user = this.profileService.getUserTest()
+    this.profileService.getUser().subscribe({
+      next: (user) => {
+        console.log('User:',user);
+        this.user = user;
+      }
+    })
   }
 
 }

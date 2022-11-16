@@ -3,11 +3,15 @@ import {Order} from "./order.interface";
 import {CommentInterface} from "./comment.interface";
 
 export interface User {
-  profile_picture: string;
-  name: string;
+  id: string;
   email: string;
+  name: string;
+  created_at: string;
+  profile_picture: string;
   phone: string;
+  roles: string;
   pets: Pet[];
-  orders: Order[];
   comments: CommentInterface[];
+  addresses: [];
+  orders: Order[];
 }

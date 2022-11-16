@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {CommentService} from "../../services/comment.service";
+import {CommentInterface} from "../../../assets/utils/interfaces/comment.interface";
 
 @Component({
   selector: 'app-contact',
@@ -7,15 +9,19 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent{
 
-  commentForm = {
-    email: '',
-    comment: ''
+  constructor(
+    private readonly commentService: CommentService
+  ) {
   }
 
   submitForm(form: any) {
-    this.commentForm.email = form.email;
-    this.commentForm.comment = form.comment;
-    console.log(this.commentForm)
+    let commentPost: CommentInterface = {
+      points: form.star,
+      comment: form.comment
+    }
+    console.log('Comment', commentPost)
+
+    this.commentService.postComment(commentPost)
   }
 
 }
