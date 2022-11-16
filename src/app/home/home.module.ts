@@ -16,6 +16,9 @@ import { AboutServicesComponent } from './about-services/about-services.componen
 import { ContactComponent } from './contact/contact.component';
 import {FormsModule} from "@angular/forms";
 import {ProfileComponent} from "./profile/profile.component";
+import {ProfileService} from "../services/profile-service.service";
+import {HttpClientModule} from "@angular/common/http";
+import {CommentService} from "../services/comment.service";
 
 const components = [
   HomeComponent,
@@ -41,7 +44,12 @@ const components = [
     HomeRoutingModule,
     RouterModule,
     PipesModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [
+    ProfileService,
+    CommentService
   ],
 })
 export class HomeModule {}

@@ -1,0 +1,58 @@
+<div class="add-pet-container">
+
+  <shape-divider></shape-divider>
+  <h1 class="display-1 fw-bold">Change pet</h1>
+
+  <div class="card mx-auto shadow p-3 mb-3 bg-body rounded">
+
+    <div class="form-content mx-auto w-50">
+
+      <h4 class="fw-bold">Don´t touch the values you want to keep</h4>
+
+      <form action="" (ngSubmit)="submitForm(addPetForm.value)" #addPetForm="ngForm">
+        <div class="mb-3">
+          <label for="petName" class="form-label fw-bold">Pet name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="petName"
+            name="petName"
+            ngModel
+            #petName="ngModel"
+            placeholder="Name">
+        </div>
+
+        <div class="mb-3">
+          <label for="petAge" class="form-label fw-bold">Pet age:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="petAge"
+            name="petAge"
+            ngModel
+            #petAge="ngModel"
+            placeholder="Age">
+        </div>
+
+        <div class="mb-3">
+          <label for="petWeight" class="form-label fw-bold">Pet weight:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="petWeight"
+            name="petWeight"
+            ngModel
+            #petWeight="ngModel"
+            placeholder="Weight">
+        </div>
+
+        <div class="button-container mx-auto text-center w-25">
+          <button class="btn btn-primary w-100 p-2"
+                  type="submit">Change</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>

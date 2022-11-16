@@ -1,0 +1,46 @@
+<div class="add-pet-container">
+
+  <shape-divider></shape-divider>
+  <h1 class="display-1 fw-bold">Edit profile</h1>
+
+  <div class="card mx-auto shadow p-3 mb-3 bg-body rounded">
+
+    <div class="form-content mx-auto w-50">
+
+      <h4>Don´t touch the values you want to keep</h4>
+
+      <form action="" (ngSubmit)="submitForm(addPetForm.value)" #addPetForm="ngForm">
+        <div class="mb-3">
+          <label for="name" class="form-label fw-bold">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            ngModel
+            #name="ngModel"
+            placeholder="Name">
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label fw-bold">Phone:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="phone"
+            name="phone"
+            ngModel
+            #phone="ngModel"
+            placeholder="Phone">
+        </div>
+
+        <div class="button-container mx-auto text-center w-25">
+          <button class="btn btn-primary w-100 p-2"
+                  type="submit">Confirm</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
