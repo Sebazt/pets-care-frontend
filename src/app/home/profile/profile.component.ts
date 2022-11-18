@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Route, Router} from "@angular/router";
 import {User} from "../../../assets/utils/interfaces/user.interface";
 import {ProfileService} from "../../services/profile-service.service";
+import {LoginService} from "../../services/login.service";
 
 @Component({
   selector: 'app-settings',
@@ -25,7 +26,8 @@ export class ProfileComponent implements OnInit {
   };
 
   constructor(
-    private readonly profileService: ProfileService
+    private readonly profileService: ProfileService,
+    public readonly loginService: LoginService
   ) { }
 
   ngOnInit(): void {
@@ -40,5 +42,9 @@ export class ProfileComponent implements OnInit {
   deletePet(value: any) {
     this.profileService.deletePetFromUser()
     alert(`Pet ${value} was deleted`)
+  }
+
+  async logout() {
+    await this.loginService.logout()
   }
 }
