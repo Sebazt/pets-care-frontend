@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from '@angular/fire/compat/auth'
 import firebase from 'firebase/compat/app';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {User} from "../../assets/utils/interfaces/user.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,8 @@ import firebase from 'firebase/compat/app';
 export class LoginService {
 
   constructor(
-    private readonly  auth: AngularFireAuth
+    private readonly auth: AngularFireAuth,
+    private readonly regist: HttpClient
   ) {
     this.auth.authState.subscribe({
       next: user => {
@@ -18,7 +21,9 @@ export class LoginService {
           localStorage.setItem('user', r.token)
         }))
         if(!user) {return}
-
+        if (user.email) {
+          localStorage.setItem('email', user.email)
+        }
         this.usuario.nombre = user.displayName;
         this.usuario.uid = user.uid;
       }
@@ -27,11 +32,13 @@ export class LoginService {
 
   usuario: any = {}
 
-  async login( proveedor: string ) {
+  async login(  ) {
     await this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
   async logout() {
+    localStorage.removeItem('user');
+    localStorage.removeItem('email');
     await this.auth.signOut();
   }
 }

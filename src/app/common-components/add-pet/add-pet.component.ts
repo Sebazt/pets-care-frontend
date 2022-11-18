@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PetService} from "../../services/pet.service";
 
 @Component({
   selector: 'app-add-pet',
@@ -7,13 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPetComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly petService: PetService,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  submitForm(value: any) {
-
+  createPet(value: any) {
+    const {petName, petEspecie, petSize, petWeight} = value;
+    console.log(value);
+    console.log(
+      {
+        name: petName,
+        species: petEspecie,
+        size: petSize,
+        weight: petWeight
+      }
+    )
+    this.petService.createPet({
+      name: petName,
+      species: petEspecie,
+      size: petSize,
+      weight: petWeight
+    })
   }
 
 }

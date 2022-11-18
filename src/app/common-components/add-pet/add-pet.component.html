@@ -9,7 +9,7 @@
 
       <h4 class="fw-bold">Don´t touch the values you want to keep</h4>
 
-      <form action="" (ngSubmit)="submitForm(addPetForm.value)" #addPetForm="ngForm">
+      <form action="" (ngSubmit)="createPet(addPetForm.value)" #addPetForm="ngForm">
         <div class="mb-3">
           <label for="petName" class="form-label fw-bold">Pet name:</label>
           <input
@@ -19,7 +19,7 @@
             name="petName"
             ngModel
             #petName="ngModel"
-            placeholder="Name">
+            placeholder="Nombre">
         </div>
 
         <div class="mb-3">
@@ -31,11 +31,11 @@
             name="petAge"
             ngModel
             #petAge="ngModel"
-            placeholder="Age">
+            placeholder="Edad">
         </div>
 
         <div class="mb-3">
-          <label for="petWeight" class="form-label fw-bold">Pet weight:</label>
+          <label for="petWeight" class="form-label fw-bold">Peso:</label>
           <input
             type="number"
             class="form-control"
@@ -43,7 +43,33 @@
             name="petWeight"
             ngModel
             #petWeight="ngModel"
-            placeholder="Weight">
+            placeholder="Peso">
+        </div>
+
+        <div class="mb-3">
+          <label for="petSize" class="form-label fw-bold">Tamaño:</label>
+          <select id="petSize"
+                  name="petSize"
+                  ngModel
+                  #petSize="ngModel"
+                  class="form-select"
+                  aria-label="Seleciona el tamaño de tu mascota">
+            <option value="tiny">Tiny</option>
+            <option selected value="medium">Medium</option>
+            <option value="big">Big</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="petEspecie" class="form-label fw-bold">Especie:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="petEspecie"
+            name="petEspecie"
+            ngModel
+            #petEspecie="ngModel"
+            placeholder="Especie">
         </div>
 
         <div class="button-container mx-auto text-center w-25">
