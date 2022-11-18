@@ -25,9 +25,8 @@ export class SigninComponent implements OnInit {
     await this.router.navigate(['/signup'])
   }
 
-  async ingresar(proveedor: string) {
-    console.log(proveedor)
-    await this.loginService.login(proveedor)
+  async ingresar() {
+    await this.loginService.login()
   }
 
 }

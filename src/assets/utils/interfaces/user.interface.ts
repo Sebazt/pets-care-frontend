@@ -1,6 +1,7 @@
 import {Pet} from "./pet.interface";
 import {Order} from "./order.interface";
 import {CommentInterface} from "./comment.interface";
+import {Addresses} from "./addresses.interface";
 
 export interface User {
   id: string;
@@ -12,6 +13,6 @@ export interface User {
   roles: string;
   pets: Pet[];
   comments: CommentInterface[];
-  addresses: [];
+  addresses: Addresses[];
   orders: Order[];
 }

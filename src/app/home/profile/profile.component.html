@@ -14,7 +14,7 @@
       <h4 class="row mx-auto d-block text-center">Welcome:</h4>
       <div class="user-name">
         <h1 class="profile-name mx-auto d-block text-center row display-5 fw-bold">
-          {{user.name}}
+          {{user.name | titlecase}}
           <a routerLink="/home/editProfile"><i class="fa-solid fa-user-pen"></i></a>
         </h1>
       </div>
@@ -37,7 +37,6 @@
               <li class="list-group-item" *ngFor="let pet of user.pets">
                 <i class="fa-solid fa-dog"></i>
                 <p>{{pet.name}}</p>
-                <p>{{pet.age}} year</p>
                 <p>{{pet.size}}</p>
                 <button (click)="deletePet(pet.id)" type="button" class="btn-close" aria-label="Close"></button>
               </li>
