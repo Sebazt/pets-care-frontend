@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import {LoginService} from "../../services/login.service";
 
 @Component({
   selector: 'app-signin',
@@ -9,7 +10,8 @@ import { Router } from "@angular/router";
 export class SigninComponent implements OnInit {
 
   constructor(
-    private router : Router
+    private router : Router,
+    public readonly loginService: LoginService
   ) { }
 
   ngOnInit(): void {
@@ -21,6 +23,11 @@ export class SigninComponent implements OnInit {
 
   public async goToSignUp():Promise<void>{
     await this.router.navigate(['/signup'])
+  }
+
+  async ingresar(proveedor: string) {
+    console.log(proveedor)
+    await this.loginService.login(proveedor)
   }
 
 }

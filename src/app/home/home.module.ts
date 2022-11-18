@@ -19,6 +19,8 @@ import {ProfileComponent} from "./profile/profile.component";
 import {ProfileService} from "../services/profile-service.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CommentService} from "../services/comment.service";
+import {AuthService} from "../services/auth.service";
+import {LoginService} from "../services/login.service";
 
 const components = [
   HomeComponent,
@@ -49,7 +51,9 @@ const components = [
   ],
   providers: [
     ProfileService,
-    CommentService
+    CommentService,
+    AuthService,
+    LoginService
   ],
 })
 export class HomeModule {}
