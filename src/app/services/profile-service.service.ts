@@ -12,7 +12,6 @@ export class ProfileService {
 
   id= 'ad4326c4-3c82-48d6-ac37-786e46d1a0ad'
 
-  auth_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkNDMyNmM0LTNjODItNDhkNi1hYzM3LTc4NmU0NmQxYTBhZCIsImlhdCI6MTY2ODYxOTEzOCwiZXhwIjoxNjY4NjE5NzM4fQ.uIjmcWzg68TTfXw8cOTlycIZ3m90oGjF9nVV8aDZQZE '
 
   constructor(
     private readonly http: HttpClient
@@ -20,10 +19,12 @@ export class ProfileService {
   }
 
   getUser(): Observable<User> {
+    const auth_token = localStorage.getItem('user');
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${this.auth_token}`
+      'Authorization': `Bearer ${auth_token}`
     });
+    console.log(auth_token)
     return this.http.get<User>(
       `${this.url}/${this.id}`,
       {headers: headers});
