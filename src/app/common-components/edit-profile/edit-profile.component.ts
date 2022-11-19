@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProfileService} from "../../services/profile-service.service";
 
 @Component({
   selector: 'app-edit-profile',
@@ -7,15 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProfileComponent implements OnInit {
 
-  constructor()
+  constructor(
+    private readonly profileService: ProfileService
+  )
    { }
 
   ngOnInit(): void {
   }
 
-  submitForm(value: any) {
+  editProfile(value: any) {
+    const newInfo = {
+      name: value.name,
+      phone: value.phone
+    }
 
-    alert('Profile updated');
+    this.profileService.editProfile(newInfo);
+
   }
 
 }
