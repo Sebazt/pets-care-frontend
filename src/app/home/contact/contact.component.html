@@ -16,24 +16,7 @@
       <h2 class="display-3">Send a comment</h2>
     </div>
     <div class="form-content mx-auto w-50">
-      <form action="" (ngSubmit)="submitForm(commentForm.value)" #commentForm="ngForm">
-        <div class="mb-3">
-          <label for="email" class="form-label">Email address</label>
-          <input
-            email="true"
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            ngModel
-            #email="ngModel"
-            [ngClass]="{'email-invalid': email.invalid && email.dirty, 'email-valid': email.valid}"
-            placeholder="name@example.com"
-            required>
-            <div *ngIf="email.invalid && email.dirty" class="mt-2">
-              Please enter a valid email
-            </div>
-        </div>
+      <form action="" (ngSubmit)="createComment(commentForm.value)" #commentForm="ngForm">
         <div class="mb-3">
           <h5 class="">Rate us</h5>
           <div class="row mx-auto mb-3">

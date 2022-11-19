@@ -1,37 +1,30 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {CommentInterface} from "../../assets/utils/interfaces/comment.interface";
+import {ServiceInterface} from "../../assets/utils/interfaces/service.interface";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CommentService {
+export class ServicesService {
 
-  url = 'http://localhost:5001/api/comments';
-
-  comment: CommentInterface = {
-    comment: "",
-    points: 0
-  }
+  url = 'http://localhost:5001/api/services'
 
   constructor(
     private readonly http: HttpClient
   ) {
   }
 
-  postComment(comment: CommentInterface) {
+  findServices(): Observable<ServiceInterface[]> {
     const auth_token = localStorage.getItem('user');
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${auth_token}`
     });
 
-    const body = JSON.stringify(comment);
-
-    this.http.post<CommentInterface>(
+    return this.http.get<ServiceInterface[]>(
       `${this.url}`,
-      body,
-      {headers: headers}).subscribe();
+      {headers: headers});
   }
-
 }

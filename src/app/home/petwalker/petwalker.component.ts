@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-petwalker',
   templateUrl: './petwalker.component.html',
   styleUrls: ['./petwalker.component.scss']
 })
-export class PetwalkerComponent implements OnInit {
+export class PetwalkerComponent {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor(
+
+  ) { }
+
 
 }

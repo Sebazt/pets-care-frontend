@@ -8,6 +8,8 @@ import {AddPetComponent} from "./add-pet/add-pet.component";
 import {FormsModule} from "@angular/forms";
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import {ProfileService} from "../services/profile-service.service";
+import { BuyServiceComponent } from './buy-service/buy-service.component';
+import {OrdersService} from "../services/orders.service";
 
 const components = [
   SidenavComponent,
@@ -18,7 +20,7 @@ const components = [
 ];
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...components, BuyServiceComponent],
   imports: [
     CommonModule,
     RouterLinkActive,
@@ -27,7 +29,8 @@ const components = [
   ],
   exports: [...components],
   providers: [
-    ProfileService
+    ProfileService,
+    OrdersService
   ]
 })
 export class CommonComponentsModule {

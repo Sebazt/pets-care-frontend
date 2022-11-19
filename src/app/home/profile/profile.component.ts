@@ -1,51 +1,27 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {User} from "../../../assets/utils/interfaces/user.interface";
-import {ProfileService} from "../../services/profile-service.service";
-import {LoginService} from "../../services/login.service";
-import {PetService} from "../../services/pet.service";
-import {Subscription} from "rxjs";
+import { Component} from '@angular/core';
+import { ProfileService } from "../../services/profile-service.service";
+import { LoginService } from "../../services/login.service";
+import { PetService } from "../../services/pet.service";
 
 @Component({
   selector: 'app-settings',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit, OnDestroy {
+export class ProfileComponent  {
 
-  user: User = {
-    addresses: [],
-    comments: [],
-    created_at: "",
-    email: "",
-    id: "",
-    name: "",
-    orders: [],
-    pets: [],
-    phone: "",
-    profile_picture: "",
-    roles: ""
-  };
-
-  usersSubscription: Subscription | undefined;
+  user$ = this.profileService.getUser();
 
   constructor(
     private readonly profileService: ProfileService,
     private readonly petService: PetService,
     public readonly loginService: LoginService
-  ) { }
-
-  ngOnInit(): void {
-    const getUser = this.profileService.getUser().subscribe({
-      next: (user) => {
-        console.log('User:',user);
-        this.user = user;
+  ) {
+    console.log(this.user$.subscribe({
+      next: r => {
+        console.log(r)
       }
-    })
-    this.usersSubscription?.add(getUser)
-  }
-
-  ngOnDestroy(): void {
-    this.usersSubscription?.unsubscribe()
+    }))
   }
 
   deletePet(value: any) {

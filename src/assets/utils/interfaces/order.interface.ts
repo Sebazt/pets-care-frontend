@@ -1,9 +1,9 @@
 
 export interface Order {
-  id: string;
-  date: Date;
-  starts_at: Date;
-  finish_at: Date;
-  price: number;
-  services: string[];
+  id?: string;
+  date?: string;
+  start_time?: string;
+  end_time?: string;
+  total_price: number;
+  services_id: string[];
 }
