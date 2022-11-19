@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PetService} from "../../services/pet.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-add-pet',
@@ -10,12 +11,13 @@ export class AddPetComponent implements OnInit {
 
   constructor(
     private readonly petService: PetService,
+    private readonly  router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
-  createPet(value: any) {
+  async createPet(value: any) {
     const {petName, petEspecie, petSize, petWeight, petAge} = value;
 
     this.petService.createPet({
@@ -25,6 +27,8 @@ export class AddPetComponent implements OnInit {
       size: petSize,
       weight: petWeight
     })
+
+    await this.router.navigate(['/profile'])
   }
 
 }

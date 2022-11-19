@@ -9,13 +9,11 @@ import {Addresses} from "../../assets/utils/interfaces/addresses.interface";
 })
 export class AddressesService {
 
-  url = 'http://localhost:5001/api/addresses';
-
-  ownerId = '';
+  url = 'https://beesoftlabs-team-2-production.up.railway.app/api/addresses';
 
   constructor(
     private readonly http: HttpClient,
-    private readonly userService: ProfileService
+    private readonly userService: ProfileService,
   ) { }
 
   createAddress(address: Addresses) {
@@ -30,7 +28,8 @@ export class AddressesService {
       body,
       {headers: headers}).subscribe({
       next: res => {
-        if(res){alert('Direccion agregada')}
+        if(res){alert('Dirección agregada')}
+
       }
     });
   }
@@ -45,7 +44,7 @@ export class AddressesService {
       `${this.url}/${id}`,
       {headers: headers}).subscribe({
       next: res => {
-        if(res) {alert('Mascota borrada')}
+        if(res) {alert('Dirección borrada')}
       }
     });
   }

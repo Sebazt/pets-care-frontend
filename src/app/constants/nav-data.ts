@@ -49,18 +49,6 @@ export const navbarData: INavbarData[] = [
   },
 
   {
-    routeLink: '/signin',
-    icon: 'fa-solid fa-user',
-    label: 'Sign in',
-  },
-
-  {
-    routeLink: '/admin',
-    icon: 'fa-solid fa-shop-lock',
-    label: 'Admin',
-  },
-
-  {
     routeLink: '/profile',
     icon: 'fa-solid fa-user',
     label: 'Profile',

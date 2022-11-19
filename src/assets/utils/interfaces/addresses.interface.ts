@@ -9,6 +9,5 @@ export interface Addresses {
   longitude?: string,
   latitude?: string,
   postal_code?: string,
-  created_at: Date,
-  owner: User
+  created_at?: Date,
 }

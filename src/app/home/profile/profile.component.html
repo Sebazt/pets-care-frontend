@@ -26,7 +26,13 @@
           <ul class="list-group list-group-flush fs-5">
             <li class="list-group-item"><strong>Email:</strong> {{(user$ | async)?.email}}</li>
             <li class="list-group-item"><strong>Phone:</strong> {{(user$ | async)?.phone}}</li>
+            <li *ngFor="let address of (user$ | async)?.addresses" class="list-group-item">
+              <strong>Dirección:</strong>
+              {{address.city}} {{address.address}} {{address.remark}}</li>
           </ul>
+          <a routerLink="/addAddress"
+                  type="button"
+                  class="link-success">Agregar dirección</a>
 
           <hr>
 
@@ -103,7 +109,7 @@
 
   </div>
 
-  <button class="btn btn-primary" (click)="logout()" type="button"></button>
+  <button class=" mx-auto logout btn btn-danger" (click)="logout()" type="button">Salir</button>
 
 </div>
 

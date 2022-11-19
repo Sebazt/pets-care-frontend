@@ -13,6 +13,7 @@ import {ProfileComponent} from "./profile/profile.component";
 import {AddPetComponent} from "../common-components/add-pet/add-pet.component";
 import {EditProfileComponent} from "../common-components/edit-profile/edit-profile.component";
 import {BuyServiceComponent} from "../common-components/buy-service/buy-service.component";
+import {AddressesComponent} from "../common-components/addresses/addresses.component";
 
 const routes: Routes = [
   {
@@ -69,6 +70,10 @@ const routes: Routes = [
       {
         path: 'buyService',
         component: BuyServiceComponent,
+      },
+      {
+        path: 'addAddress',
+        component: AddressesComponent,
       },
       {
         path: '',

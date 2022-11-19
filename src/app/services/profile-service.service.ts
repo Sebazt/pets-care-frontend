@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 })
 export class ProfileService {
 
-  url = 'http://localhost:5001/api/users/email';
+  url = 'https://beesoftlabs-team-2-production.up.railway.app/api/users/email';
 
   constructor(
     private readonly http: HttpClient

@@ -7,7 +7,7 @@ import {CommentInterface} from "../../assets/utils/interfaces/comment.interface"
 })
 export class CommentService {
 
-  url = 'http://localhost:5001/api/comments';
+  url = 'https://beesoftlabs-team-2-production.up.railway.app/api/comments';
 
   comment: CommentInterface = {
     comment: "",

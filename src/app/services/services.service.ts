@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
 })
 export class ServicesService {
 
-  url = 'http://localhost:5001/api/services'
+  url = 'https://beesoftlabs-team-2-production.up.railway.app/api/services'
 
   constructor(
     private readonly http: HttpClient
