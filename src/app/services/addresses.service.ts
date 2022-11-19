@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Pet} from "../../assets/utils/interfaces/pet.interface";
 import {ProfileService} from "./profile-service.service";
-import {Observable} from "rxjs";
+import {Pet} from "../../assets/utils/interfaces/pet.interface";
+import {Addresses} from "../../assets/utils/interfaces/addresses.interface";
 
 @Injectable({
   providedIn: 'root'
 })
-export class PetService {
+export class AddressesService {
 
-  url = 'http://localhost:5001/api/pets';
+  url = 'http://localhost:5001/api/addresses';
 
   ownerId = '';
 
@@ -18,14 +18,30 @@ export class PetService {
     private readonly userService: ProfileService
   ) { }
 
-
-  deletePetFromUser(id: string) {
+  createAddress(address: Addresses) {
+    const body = JSON.stringify(address);
     const auth_token = localStorage.getItem('user');
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${auth_token}`
     });
-    return this.http.delete<Pet>(
+    return this.http.post<Addresses>(
+      `${this.url}`,
+      body,
+      {headers: headers}).subscribe({
+      next: res => {
+        if(res){alert('Direccion agregada')}
+      }
+    });
+  }
+
+  deleteAddressFromUser(id: string) {
+    const auth_token = localStorage.getItem('user');
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${auth_token}`
+    });
+    return this.http.delete<Addresses>(
       `${this.url}/${id}`,
       {headers: headers}).subscribe({
       next: res => {
@@ -34,26 +50,7 @@ export class PetService {
     });
   }
 
-  createPet(petInfo: Pet) {
-    const body = JSON.stringify(petInfo);
-    const auth_token = localStorage.getItem('user');
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${auth_token}`
-    });
-    return this.http.post<Pet>(
-      `${this.url}`,
-      body,
-      {headers: headers}).subscribe({
-      next: res => {
-        if(res){alert('Mascota creada')}
-      }
-    });
-  }
-
-  foundPets() {
+  foundAddresses() {
     return this.userService.getUser()
   }
-
-
 }

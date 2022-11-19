@@ -16,18 +16,11 @@ export class AddPetComponent implements OnInit {
   }
 
   createPet(value: any) {
-    const {petName, petEspecie, petSize, petWeight} = value;
-    console.log(value);
-    console.log(
-      {
-        name: petName,
-        species: petEspecie,
-        size: petSize,
-        weight: petWeight
-      }
-    )
+    const {petName, petEspecie, petSize, petWeight, petAge} = value;
+
     this.petService.createPet({
       name: petName,
+      age: petAge,
       species: petEspecie,
       size: petSize,
       weight: petWeight

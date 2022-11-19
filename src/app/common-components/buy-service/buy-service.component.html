@@ -1,0 +1,62 @@
+<div class="add-pet-container">
+
+  <shape-divider></shape-divider>
+  <h1 class="display-1 fw-bold">Pide tu servicio</h1>
+
+  <div class="card mx-auto shadow p-3 mb-3 bg-body rounded">
+
+    <div class="form-content mx-auto w-50">
+
+      <form #petDayCareForm="ngForm" (ngSubmit)="crearOrder(petDayCareForm.value)">
+
+        <div class="form-outline mb-4">
+          <label for="pet" class="form-label fw-bold">Mascota:</label>
+          <select id="pet"
+                  name="pet"
+                  ngModel
+                  #pet="ngModel"
+                  class="form-select form-control form-control-lg"
+                  aria-label="Seleciona tu mascota"
+          >
+            <option *ngFor="let pet of pets" value="{{pet.id}}">{{pet.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-outline mb-4">
+          <label for="service" class="form-label fw-bold">Servicios:</label>
+          <select id="service"
+                  name="service"
+                  ngModel
+                  #service="ngModel"
+                  class="form-select"
+                  aria-label="Seleciona el servicio que deseas"
+          >
+            <option *ngFor="let service of services"
+                    value="{{service.id}}">
+              {{service.service | titlecase}} / Precio {{service.price | currency:'COP':'symbol':'3.0'}}</option>
+
+          </select>
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label fw-bold"
+                 for="time">Selecciona fecha y hora:</label>
+
+          <input type="datetime-local"
+                 id="time"
+                 name="time"
+                 #time="ngModel"
+                 ngModel
+                 class="form-control"
+                 value="2018-06-12T19:30"
+                 min="2018-06-07T00:00"
+                 max="2018-06-14T00:00">
+        </div>
+
+        <button class="mx-auto btn btn-success" type="submit">Confirmar</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>

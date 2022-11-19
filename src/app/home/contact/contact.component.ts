@@ -14,12 +14,11 @@ export class ContactComponent{
   ) {
   }
 
-  submitForm(form: any) {
+  createComment(form: any) {
     let commentPost: CommentInterface = {
       points: form.star,
       comment: form.comment
     }
-    console.log('Comment', commentPost)
 
     this.commentService.postComment(commentPost)
   }

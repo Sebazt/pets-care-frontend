@@ -12,7 +12,6 @@ export const navbarData: INavbarData[] = [
     routeLink: 'home',
     icon: 'fa fa-paw',
     label: 'Servicies',
-    /* expanded: true,  aquí lo paso t,  y no hay necesidad de expandirlo*/
     items: [
       {
         routeLink: '/home/petwalker',
@@ -47,12 +46,6 @@ export const navbarData: INavbarData[] = [
     routeLink: 'contact',
     icon: 'fa-solid fa-headset',
     label: 'Contact',
-  },
-
-  {
-    routeLink: '/signup',
-    icon: 'fa-solid fa-pencil',
-    label: 'Sign up',
   },
 
   {

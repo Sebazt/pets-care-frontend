@@ -40,5 +40,6 @@ export class LoginService {
     localStorage.removeItem('user');
     localStorage.removeItem('email');
     await this.auth.signOut();
+    window.location.reload();
   }
 }
