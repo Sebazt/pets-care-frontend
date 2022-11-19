@@ -29,10 +29,11 @@
             <li *ngFor="let address of (user$ | async)?.addresses" class="list-group-item">
               <strong>Dirección:</strong>
               {{address.city}} {{address.address}} {{address.remark}}</li>
+            <a routerLink="/addAddress"
+               type="button"
+               class="h6 ml-5 link-success">Agregar dirección</a>
           </ul>
-          <a routerLink="/addAddress"
-                  type="button"
-                  class="link-success">Agregar dirección</a>
+
 
           <hr>
 
