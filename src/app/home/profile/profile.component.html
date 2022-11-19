@@ -74,21 +74,7 @@
               <div class="row orders-list">
                 <div class="col">
                   <h4 class="fw-bold">Date: </h4>
-                  <p>{{order.date | date:'medium'}}</p>
-                </div>
-                <div class="col">
-                  <h4 class="fw-bold">Starts at: </h4>
-                  <p>{{order.start_time | date:'medium'}}</p>
-                </div>
-                <div class="col">
-                  <h4 class="fw-bold">Finish at: </h4>
-                  <p>{{order.end_time | date:'medium'}}</p>
-                </div>
-                <div class="col">
-                  <h4 class="fw-bold">Services: </h4>
-                  <div *ngFor="let service of order.services_id">
-                    <p>{{service}}</p>
-                  </div>
+                  <p>{{order.created_at | date:'medium'}}</p>
                 </div>
                 <div class="col">
                   <h4>

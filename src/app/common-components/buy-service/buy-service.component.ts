@@ -42,6 +42,7 @@ export class BuyServiceComponent implements OnInit {
     const elemento = this.services.filter(s => s.id === service)
 
     this.orderService.createOrder({
+      start_time: time,
       services_id: [service],
       total_price: elemento[0].price
     })
