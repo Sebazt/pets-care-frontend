@@ -9,7 +9,7 @@ import {Order} from "../../assets/utils/interfaces/order.interface";
 })
 export class OrdersService {
 
-  url = 'http://localhost:5001/api/orders';
+  url = 'https://beesoftlabs-team-2-production.up.railway.app/api/orders';
 
   ownerId = '';
 

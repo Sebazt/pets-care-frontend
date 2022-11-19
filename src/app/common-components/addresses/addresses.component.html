@@ -1,0 +1,70 @@
+<div class="add-pet-container">
+
+  <shape-divider></shape-divider>
+  <h1 class="display-1 fw-bold">Change pet</h1>
+
+  <div class="card mx-auto shadow p-3 mb-3 bg-body rounded">
+
+    <div class="form-content mx-auto w-50">
+
+      <h4 class="fw-bold">Agrega una dirección</h4>
+
+      <form action="" (ngSubmit)="createAddress(addAddress.value)" #addAddress="ngForm">
+        <div class="mb-3">
+          <label for="municipio" class="form-label fw-bold">Municipio:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="municipio"
+            name="municipio"
+            ngModel
+            #municipio="ngModel"
+            placeholder="Municipio">
+        </div>
+
+        <div class="mb-3">
+          <label for="departamento" class="form-label fw-bold">Departamento:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="departamento"
+            name="departamento"
+            ngModel
+            #departamento="ngModel"
+            placeholder="Departamento">
+        </div>
+
+        <div class="mb-3">
+          <label for="direccion" class="form-label fw-bold">Direccion:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="direccion"
+            name="direccion"
+            ngModel
+            #direccion="ngModel"
+            placeholder="Dirección">
+        </div>
+
+        <div class="mb-3">
+          <label for="remark" class="form-label fw-bold">Adicional:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="remark"
+            name="remark"
+            ngModel
+            #remark="ngModel"
+            placeholder="Unidad o apartamento">
+        </div>
+
+        <div class="button-container mx-auto text-center w-25">
+          <button class="btn btn-primary w-100 p-2"
+                  type="submit">Crear</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>

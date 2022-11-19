@@ -1,0 +1,25 @@
+@import "src/app/styles/variables";
+
+.display-1 {
+  color: $color-white
+}
+
+.card {
+  max-width: 600px;
+  padding: 30px 10px !important;
+}
+
+.display-1 {
+  color: $color-white;
+}
+
+@media ( max-width: 550px ) {
+  .form-content {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .button-container {
+    width: 100% !important;
+  }
+}

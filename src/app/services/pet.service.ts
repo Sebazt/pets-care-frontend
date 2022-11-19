@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
 })
 export class PetService {
 
-  url = 'http://localhost:5001/api/pets';
+  url = 'https://beesoftlabs-team-2-production.up.railway.app/api/pets';
 
   ownerId = '';
 

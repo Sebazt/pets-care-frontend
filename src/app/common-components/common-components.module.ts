@@ -10,17 +10,20 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import {ProfileService} from "../services/profile-service.service";
 import { BuyServiceComponent } from './buy-service/buy-service.component';
 import {OrdersService} from "../services/orders.service";
+import { AddressesComponent } from './addresses/addresses.component';
 
 const components = [
   SidenavComponent,
   SublevelMenuComponent,
   ShapeDividerComponent,
   AddPetComponent,
-  EditProfileComponent
+  EditProfileComponent,
+  BuyServiceComponent,
+  AddressesComponent
 ];
 
 @NgModule({
-  declarations: [...components, BuyServiceComponent],
+  declarations: [...components],
   imports: [
     CommonModule,
     RouterLinkActive,
