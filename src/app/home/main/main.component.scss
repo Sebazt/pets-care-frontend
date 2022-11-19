@@ -4,7 +4,7 @@
 /* header */
 
 .header_home {
-  weight: 100%;
+  width: 100%;
   height: 50vh;
   display: flex;
   border-radius: $borderR;
@@ -326,7 +326,7 @@
 
 .contac-home{
   display:flex;
-  weight:100%;
+  width:100%;
   min-height: 80vh;
   flex-direction: row;
   flex-wrap: wrap;
@@ -335,13 +335,13 @@
   position:relative;
 
   .img-svg{
-    weight:40%;
+    width:40%;
     height:80vh;
     position:relative;
 
 
     .imgSVG{
-      weight:100%;
+      width:100%;
       height: 500px;
       object-fit: contain;
     }
@@ -379,7 +379,7 @@
 }
 
 .contIMG{
-  weight:100%;
+  width:100%;
   height: 60vh;
   border-radius: $borderR;
 }
